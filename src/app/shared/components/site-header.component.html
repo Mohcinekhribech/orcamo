@@ -1,0 +1,83 @@
+<header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-gray-200/50 z-50 transition-all duration-300 shadow-sm">
+  <div class="container">
+    <div class="flex items-center justify-between h-16 md:h-20 gap-4 md:gap-8">
+      <a href="/" class="flex items-center no-underline transition-all duration-200 hover:scale-105" aria-label="Orcamo - Accueil">
+        <img src="assets/logo-orcamo.png" alt="Orcamo" class="h-8 md:h-12 w-auto drop-shadow-md">
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex flex-1 justify-center" role="navigation" aria-label="Navigation principale">
+        <ul class="flex list-none m-0 p-0 gap-8 lg:gap-12">
+          <li><button class="bg-none border-none text-gray-700 font-medium text-base cursor-pointer py-2 px-0 transition-all duration-200 relative hover:text-black after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full" (click)="scrollToSection('services')">Services</button></li>
+          <li><button class="bg-none border-none text-gray-700 font-medium text-base cursor-pointer py-2 px-0 transition-all duration-200 relative hover:text-black after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full" (click)="scrollToSection('process')">Process</button></li>
+          <li><button class="bg-none border-none text-gray-700 font-medium text-base cursor-pointer py-2 px-0 transition-all duration-200 relative hover:text-black after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-black after:transition-all after:duration-300 hover:after:w-full" (click)="scrollToSection('contact')">Contact</button></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop CTA Button -->
+      <button class="hidden md:block btn btn-primary text-sm lg:text-base px-4 lg:px-6 py-2 lg:py-3" (click)="scrollToSection('contact')">
+        Devis gratuit
+      </button>
+
+      <!-- Mobile Menu Button -->
+      <button 
+        class="md:hidden flex items-center justify-center w-10 h-10 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors duration-200"
+        (click)="toggleMobileMenu()"
+        aria-label="Menu mobile"
+        [attr.aria-expanded]="isMobileMenuOpen"
+      >
+        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path *ngIf="!isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path *ngIf="isMobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div 
+      class="md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-200 shadow-lg transition-all duration-300"
+      [class.max-h-0]="!isMobileMenuOpen"
+      [class.max-h-96]="isMobileMenuOpen"
+      [class.opacity-0]="!isMobileMenuOpen"
+      [class.opacity-100]="isMobileMenuOpen"
+      [class.overflow-hidden]="true"
+    >
+      <nav class="px-4 py-6" role="navigation" aria-label="Navigation mobile">
+        <ul class="space-y-4">
+          <li>
+            <button 
+              class="w-full text-left text-gray-700 font-medium text-lg py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+              (click)="scrollToSection('services'); toggleMobileMenu()"
+            >
+              Services
+            </button>
+          </li>
+          <li>
+            <button 
+              class="w-full text-left text-gray-700 font-medium text-lg py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+              (click)="scrollToSection('process'); toggleMobileMenu()"
+            >
+              Process
+            </button>
+          </li>
+          <li>
+            <button 
+              class="w-full text-left text-gray-700 font-medium text-lg py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-200"
+              (click)="scrollToSection('contact'); toggleMobileMenu()"
+            >
+              Contact
+            </button>
+          </li>
+          <li class="pt-4 border-t border-gray-200">
+            <button 
+              class="w-full btn btn-primary text-lg py-3"
+              (click)="scrollToSection('contact'); toggleMobileMenu()"
+            >
+              Devis gratuit
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header> 

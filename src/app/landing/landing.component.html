@@ -1,0 +1,401 @@
+<!-- Skip link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Header -->
+<app-site-header></app-site-header>
+
+<!-- Main content -->
+<main id="main-content" class="pt-16 md:pt-20">
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- Background with gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent"></div>
+    
+    <!-- Animated background elements -->
+    <div class="absolute inset-0 overflow-hidden">
+      <div class="absolute -top-40 -right-40 w-80 h-80 bg-gray-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
+      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000"></div>
+      <div class="absolute top-40 left-40 w-80 h-80 bg-gray-400 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="container relative z-10">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="animate-fade-in-up">
+          <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">
+            Votre 
+            <span class="text-gradient">solution digitale</span> 
+            clé en main
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Créons ensemble votre présence en ligne moderne, rapide et accessible. 
+            Des sites web professionnels pour tous les entrepreneurs.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <button class="btn btn-primary text-lg px-8 py-4" (click)="scrollToSection('contact')">
+              Demander un devis gratuit
+            </button>
+            <button class="btn btn-secondary text-lg px-8 py-4" (click)="scrollToSection('services')">
+              Découvrir nos services
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
+        <div class="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="py-20 gradient-section">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">À propos d'Orcamo</h2>
+          <p class="text-xl text-gray-600 leading-relaxed">
+            Nous aidons les entrepreneurs et petites entreprises à établir facilement leur présence en ligne. 
+            Création rapide de sites web, tarifs abordables et support personnalisé.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="card p-8 text-center service-card">
+            <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Création rapide</h3>
+            <p class="text-gray-600">Sites web livrés rapidement</p>
+          </div>
+
+          <div class="card p-8 text-center service-card">
+            <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Sur devis</h3>
+            <p class="text-gray-600">Prix adaptés à vos besoins</p>
+          </div>
+
+          <div class="card p-8 text-center service-card">
+            <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Support personnalisé</h3>
+            <p class="text-gray-600">Accompagnement sur mesure</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nos Services</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Des solutions complètes pour votre présence en ligne
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="card p-6 service-card">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Sites vitrine</h3>
+          <p class="text-gray-600 text-sm">Création de sites web professionnels pour présenter votre activité</p>
+        </div>
+
+        <div class="card p-6 service-card">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">E-commerce</h3>
+          <p class="text-gray-600 text-sm">Boutiques en ligne pour vendre vos produits</p>
+        </div>
+
+        <div class="card p-6 service-card">
+          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">Système de réservation</h3>
+          <p class="text-gray-600 text-sm">Intégration de systèmes de réservation</p>
+        </div>
+
+                 <div class="card p-6 service-card">
+           <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+             <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+             </svg>
+           </div>
+           <h3 class="text-lg font-bold text-gray-900 mb-2">Plateformes sur mesure</h3>
+           <p class="text-gray-600 text-sm">Création de plateformes personnalisées selon vos besoins</p>
+         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-20 gradient-section">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Notre Processus</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Une approche simple et efficace en 4 étapes
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center step">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 relative">
+            <span class="text-2xl font-bold text-black">1</span>
+            <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-0.5 bg-gray-300 hidden lg:block"></div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Consultation</h3>
+          <p class="text-gray-600">Discussion de vos besoins et objectifs</p>
+        </div>
+
+        <div class="text-center step">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 relative">
+            <span class="text-2xl font-bold text-black">2</span>
+            <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-0.5 bg-gray-300 hidden lg:block"></div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Design</h3>
+          <p class="text-gray-600">Création de maquettes personnalisées</p>
+        </div>
+
+        <div class="text-center step">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 relative">
+            <span class="text-2xl font-bold text-black">3</span>
+            <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-0.5 bg-gray-300 hidden lg:block"></div>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Développement</h3>
+          <p class="text-gray-600">Intégration et développement du site</p>
+        </div>
+
+        <div class="text-center step">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <span class="text-2xl font-bold text-black">4</span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-4">Livraison</h3>
+          <p class="text-gray-600">Mise en ligne et formation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Testimonials Section -->
+  <section class="py-20 gradient-section">
+    <div class="container">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Témoignages</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Ce que nos clients disent de nous
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="card p-8 testimonial-card">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-black font-bold">Y</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Youssef B.</h4>
+              <p class="text-gray-600 text-sm">Entrepreneur</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">"Orcamo a livré mon site en 5 jours, très satisfait du résultat et du service !"</p>
+        </div>
+
+        <div class="card p-8 testimonial-card">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-black font-bold">S</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Salma D.</h4>
+              <p class="text-gray-600 text-sm">Boutique en ligne</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">"Service professionnel, rapide et humain. Mon site e-commerce fonctionne parfaitement !"</p>
+        </div>
+
+        <div class="card p-8 testimonial-card">
+          <div class="flex items-center mb-6">
+            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
+              <span class="text-black font-bold">A</span>
+            </div>
+            <div>
+              <h4 class="font-bold text-gray-900">Ahmed M.</h4>
+              <p class="text-gray-600 text-sm">Restaurant</p>
+            </div>
+          </div>
+          <p class="text-gray-700 italic">"Excellent rapport qualité-prix. Le système de réservation intégré fonctionne très bien."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20">
+    <div class="container">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contactez-nous</h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Prêt à démarrer votre projet ? Parlons-en !
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12">
+          <!-- Contact Form -->
+          <div class="card p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Demander un devis</h3>
+            
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6" action="https://formspree.io/f/mqalywdz" method="POST">
+              <!-- Hidden fields for Formspree -->
+              <input type="hidden" name="_subject" value="Nouveau devis Orcamo" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              
+              <div>
+                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom complet *</label>
+                <input 
+                  type="text" 
+                  id="name"
+                  name="name"
+                  formControlName="name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+                  placeholder="Votre nom"
+                >
+                <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-red-500 text-sm mt-1">
+                  {{ getErrorMessage('name') }}
+                </div>
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                <input 
+                  type="email" 
+                  id="email"
+                  name="email"
+                  formControlName="email"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+                  placeholder="votre@email.com"
+                >
+                <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-red-500 text-sm mt-1">
+                  {{ getErrorMessage('email') }}
+                </div>
+              </div>
+
+              <div>
+                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service souhaité *</label>
+                <select 
+                  id="service"
+                  name="service"
+                  formControlName="service"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
+                >
+                  <option value="">Sélectionnez un service</option>
+                  <option value="site-vitrine">Site vitrine</option>
+                  <option value="e-commerce">E-commerce</option>
+                  <option value="sur-mesure">Sur mesure</option>
+                  <option value="autre">Autre</option>
+                </select>
+                <div *ngIf="contactForm.get('service')?.invalid && contactForm.get('service')?.touched" class="text-red-500 text-sm mt-1">
+                  {{ getErrorMessage('service') }}
+                </div>
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                <textarea 
+                  id="message"
+                  name="message"
+                  formControlName="message"
+                  rows="4"
+                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200 resize-none"
+                  placeholder="Décrivez votre projet..."
+                ></textarea>
+                <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-red-500 text-sm mt-1">
+                  {{ getErrorMessage('message') }}
+                </div>
+              </div>
+
+              <button 
+                type="submit" 
+                class="btn btn-primary w-full"
+                [disabled]="contactForm.invalid || isSubmitted"
+              >
+                <span *ngIf="!isSubmitted">Envoyer le message</span>
+                <span *ngIf="isSubmitted">Message envoyé !</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="space-y-8">
+            <div class="card p-8">
+              <h3 class="text-2xl font-bold text-gray-900 mb-6">Informations de contact</h3>
+              
+                             <div class="space-y-6">
+                 <div class="flex items-center">
+                  <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">Téléphone</h4>
+                    <p class="text-gray-600">+212 6 06 85 98 86</p>
+                  </div>
+                </div>
+
+                <div class="flex items-center">
+                  <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mr-4">
+                    <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">Email</h4>
+                    <p class="text-gray-600">orcamo.services&#64;gmail.com</p>
+                  </div>
+                </div>
+              </div>
+                         </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<app-site-footer></app-site-footer>
+
+<!-- WhatsApp FAB -->
+ <div class="fixed bottom-0 right-0">
+   <app-whatsapp-fab></app-whatsapp-fab>
+ </div>
