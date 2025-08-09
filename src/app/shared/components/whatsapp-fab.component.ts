@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 })
 export class WhatsappFabComponent {
   openWhatsApp(): void {
-    const message = encodeURIComponent('Salam Orcamo, bghit devis');
+    const message = encodeURIComponent('Bonjour, je souhaiterais obtenir un devis pour un projet web. Merci.');
     const url = `https://wa.me/212606859886?text=${message}`;
     window.open(url, '_blank');
   }
