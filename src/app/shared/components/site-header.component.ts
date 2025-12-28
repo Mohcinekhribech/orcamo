@@ -15,6 +15,10 @@ export class SiteHeaderComponent {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    // Close mobile menu if open
+    if (this.isMobileMenuOpen) {
+      this.isMobileMenuOpen = false;
+    }
   }
 
   toggleMobileMenu(): void {

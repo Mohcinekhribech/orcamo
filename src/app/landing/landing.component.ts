@@ -25,9 +25,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
+      firstName: ['', [Validators.required, Validators.minLength(2)]],
+      lastName: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      service: ['', Validators.required],
+      company: ['', Validators.required],
+      projectType: ['', Validators.required],
       message: ['', [Validators.required, Validators.minLength(10)]]
     });
   }
@@ -95,11 +97,13 @@ export class LandingComponent implements OnInit, AfterViewInit {
       
       // Create FormData for Formspree
       const formDataToSend = new FormData();
-      formDataToSend.append('name', formData.name);
+      formDataToSend.append('firstName', formData.firstName);
+      formDataToSend.append('lastName', formData.lastName);
       formDataToSend.append('email', formData.email);
-      formDataToSend.append('service', formData.service);
+      formDataToSend.append('company', formData.company);
+      formDataToSend.append('projectType', formData.projectType);
       formDataToSend.append('message', formData.message);
-      formDataToSend.append('_subject', 'Nouveau devis Orcamo');
+      formDataToSend.append('_subject', 'New Contact Form - Orcamo');
       formDataToSend.append('_captcha', 'false');
       formDataToSend.append('_template', 'table');
       
@@ -131,9 +135,9 @@ export class LandingComponent implements OnInit, AfterViewInit {
   getErrorMessage(fieldName: string): string {
     const field = this.contactForm.get(fieldName);
     if (field?.errors && field.touched) {
-      if (field.errors['required']) return 'Ce champ est requis';
-      if (field.errors['email']) return 'Email invalide';
-      if (field.errors['minlength']) return `Minimum ${field.errors['minlength'].requiredLength} caractères`;
+      if (field.errors['required']) return 'This field is required';
+      if (field.errors['email']) return 'Invalid email';
+      if (field.errors['minlength']) return `Minimum ${field.errors['minlength'].requiredLength} characters`;
     }
     return '';
   }

@@ -9,4 +9,11 @@ import { CommonModule } from '@angular/common';
 })
 export class SiteFooterComponent {
   currentYear = new Date().getFullYear();
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 } 

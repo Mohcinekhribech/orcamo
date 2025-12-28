@@ -5,387 +5,383 @@
 <app-site-header></app-site-header>
 
 <!-- Main content -->
-<main id="main-content" class="pt-16 md:pt-20">
+<main id="main-content" class="flex-grow bg-background-light dark:bg-background-dark text-primary dark:text-white">
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background with gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-100"></div>
-    <div class="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent"></div>
-    
-    <!-- Animated background elements -->
-    <div class="absolute inset-0 overflow-hidden">
-      <div class="absolute -top-40 -right-40 w-80 h-80 bg-gray-200 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
-      <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-gray-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000"></div>
-      <div class="absolute top-40 left-40 w-80 h-80 bg-gray-400 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-4000"></div>
+  <section class="relative pt-20 pb-32 overflow-hidden">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <div class="flex-1 flex flex-col gap-8">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background-alt w-fit border border-gray-200">
+          <span class="w-2 h-2 rounded-full bg-green-500"></span>
+          <span class="text-xs font-semibold uppercase tracking-wide text-gray-600">Enterprise Solutions</span>
+        </div>
+        <h1 class="text-5xl lg:text-6xl font-extrabold text-primary dark:text-white leading-[1.1] tracking-tight">
+          We Transform Businesses Through <span class="text-gray-500">Digital Solutions</span>
+        </h1>
+        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">
+          Strategic consulting and scalable technology implementation for the modern enterprise. We bridge the gap between ambitious business goals and flawless technical execution.
+        </p>
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-black text-white text-base font-bold transition-all shadow-lg hover:shadow-xl cursor-pointer" (click)="scrollToSection('contact')">
+            Get a Strategy Audit
+          </a>
+          <a class="flex items-center justify-center rounded-lg h-12 px-8 bg-white border border-gray-200 hover:bg-gray-50 text-primary text-base font-bold transition-all cursor-pointer" (click)="scrollToSection('solutions')">
+            View Our Work
+          </a>
+        </div>
+        <div class="pt-8 border-t border-gray-100 mt-4">
+          <p class="text-sm font-medium text-gray-500 mb-4">Trusted by industry leaders</p>
+          <div class="flex gap-8 opacity-60 grayscale">
+            <!-- Simple CSS Logo Replacements for layout -->
+            <div class="flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">change_history</span> Acme</div>
+            <div class="flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">circle</span> Global</div>
+            <div class="flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">square</span> Nexus</div>
+            <div class="flex items-center gap-2 font-bold text-xl font-display text-gray-400 hidden sm:flex"><span class="material-symbols-outlined">pentagon</span> Vertex</div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1 w-full lg:max-w-[600px]">
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
+          <div class="absolute inset-0 bg-primary/10 group-hover:bg-primary/5 transition-colors z-10"></div>
+          <div class="w-full h-full bg-cover bg-center" data-alt="Modern minimalist office interior with glass walls" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8_mipgIaHlZYbw7UcbrnCbtYaZosb1PU2VoxFCmD50KKG_KTwd8zCHHx8OmG0hxsJ7ZDvgDQbmRwq1qB90FnLvh-zrXXfLOGz7Pw1rpbrrCbP_gugz4nnjgzprIZw9DJ_4UBwOSDRRN9xa7W7ZCoWa_GG_HEfGyggkfBxA5ir6XW2MI7W7j4hw5ICJiGNl02SKm95cq2Lm9voQsrxzgltLhZarG2axRR6st8uCoSp7vj-GGKmVMZDfED-G1w836_IWQkDiuznnn0');"></div>
+          <!-- Floating Card Decoration -->
+          <div class="absolute bottom-8 left-8 right-8 z-20 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-100 hidden sm:block">
+            <div class="flex items-start justify-between">
+              <div>
+                <p class="text-sm text-gray-500 font-medium">Growth Impact</p>
+                <h4 class="text-2xl font-bold text-primary mt-1">+245%</h4>
+              </div>
+              <div class="h-10 w-10 bg-green-100 rounded-full flex items-center justify-center text-green-600">
+                <span class="material-symbols-outlined">trending_up</span>
+              </div>
+            </div>
+            <div class="mt-4 h-2 w-full bg-gray-100 rounded-full overflow-hidden">
+              <div class="h-full bg-primary w-[75%]"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Content -->
-    <div class="container relative z-10">
-      <div class="max-w-4xl mx-auto text-center">
-        <div class="animate-fade-in-up">
-          <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-6 leading-tight">
-            Votre 
-            <span class="text-gradient">solution digitale</span> 
-            clé en main
-          </h1>
-          <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Créons ensemble votre présence en ligne moderne, rapide et accessible. 
-            Des sites web professionnels pour tous les entrepreneurs.
+  <!-- About Section (Pillars) -->
+  <section class="py-24 bg-background-alt" id="about">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+        <div class="max-w-2xl">
+          <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">About Orcamo</h2>
+          <h3 class="text-3xl md:text-4xl font-bold text-primary dark:text-white tracking-tight">
+            Building digital ecosystems that drive sustainable business growth.
+          </h3>
+        </div>
+        <p class="max-w-md text-gray-600 dark:text-gray-400 leading-relaxed">
+          We don't just build software; we architect the future of your company through three fundamental pillars of transformation.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Pillar 1 -->
+        <div class="group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+          <div class="h-12 w-12 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-center justify-center text-primary dark:text-white mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined">strategy</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3 text-primary dark:text-white">Strategic Consulting</h4>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+            Aligning digital initiatives with your long-term business objectives to ensure every line of code serves a purpose.
           </p>
-          <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button class="btn btn-primary text-lg px-8 py-4" (click)="scrollToSection('contact')">
-              Demander un devis gratuit
-            </button>
-            <button class="btn btn-secondary text-lg px-8 py-4" (click)="scrollToSection('services')">
-              Découvrir nos services
-            </button>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <div class="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-        <div class="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="py-20 gradient-section">
-    <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">À propos d'Orcamo</h2>
-          <p class="text-xl text-gray-600 leading-relaxed">
-            Nous aidons les entrepreneurs et petites entreprises à établir facilement leur présence en ligne. 
-            Création rapide de sites web, tarifs abordables et support personnalisé.
+        <!-- Pillar 2 -->
+        <div class="group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+          <div class="h-12 w-12 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-center justify-center text-primary dark:text-white mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined">memory</span>
+          </div>
+          <h4 class="text-xl font-bold mb-3 text-primary dark:text-white">Advanced Technology</h4>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+            Implementing cutting-edge tech stacks and robust architectures that ensure security, speed, and reliability.
           </p>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="card p-8 text-center service-card">
-            <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Création rapide</h3>
-            <p class="text-gray-600">Sites web livrés rapidement</p>
+        <!-- Pillar 3 -->
+        <div class="group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+          <div class="h-12 w-12 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-center justify-center text-primary dark:text-white mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+            <span class="material-symbols-outlined">monitoring</span>
           </div>
+          <h4 class="text-xl font-bold mb-3 text-primary dark:text-white">Scalable Growth</h4>
+          <p class="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+            Designing systems that grow with your user base and market demand, preventing technical debt before it starts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-          <div class="card p-8 text-center service-card">
-            <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Sur devis</h3>
-            <p class="text-gray-600">Prix adaptés à vos besoins</p>
+  <!-- Solutions Grid -->
+  <section class="py-24 bg-white dark:bg-background-dark" id="solutions">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4 tracking-tight">Our Digital Transformation Solutions</h2>
+        <p class="text-gray-600 dark:text-gray-400">Comprehensive services designed to modernize your operations and elevate your customer experience.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Solution 1 -->
+        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+          <span class="material-symbols-outlined text-primary mb-4 text-3xl">cloud_upload</span>
+          <h3 class="text-lg font-bold mb-2">Cloud Migration</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Seamlessly moving legacy infrastructure to secure, scalable cloud environments.</p>
+        </div>
+        <!-- Solution 2 -->
+        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+          <span class="material-symbols-outlined text-primary mb-4 text-3xl">psychology</span>
+          <h3 class="text-lg font-bold mb-2">AI Integration</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Leveraging machine learning to automate processes and gain predictive insights.</p>
+        </div>
+        <!-- Solution 3 -->
+        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+          <span class="material-symbols-outlined text-primary mb-4 text-3xl">code_blocks</span>
+          <h3 class="text-lg font-bold mb-2">Custom Development</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Bespoke software solutions tailored exactly to your unique business logic.</p>
+        </div>
+        <!-- Solution 4 -->
+        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+          <span class="material-symbols-outlined text-primary mb-4 text-3xl">smartphone</span>
+          <h3 class="text-lg font-bold mb-2">Mobile Experience</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Native and cross-platform mobile apps that engage users on the go.</p>
+        </div>
+        <!-- Solution 5 -->
+        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+          <span class="material-symbols-outlined text-primary mb-4 text-3xl">database</span>
+          <h3 class="text-lg font-bold mb-2">Data Analytics</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Turning raw data into actionable dashboards for better decision making.</p>
+        </div>
+        <!-- Solution 6 -->
+        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+          <span class="material-symbols-outlined text-primary mb-4 text-3xl">security</span>
+          <h3 class="text-lg font-bold mb-2">Cybersecurity</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Enterprise-grade security audits and implementation to protect your assets.</p>
+        </div>
+        <!-- Solution 7 (Spans 2 cols on large screens to fill grid nicely) -->
+        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-primary text-white md:col-span-2 xl:col-span-2 flex flex-col justify-center relative overflow-hidden group">
+          <div class="absolute right-0 bottom-0 opacity-10 transform translate-x-10 translate-y-10 group-hover:scale-110 transition-transform">
+            <span class="material-symbols-outlined text-[150px]">rocket_launch</span>
           </div>
-
-          <div class="card p-8 text-center service-card">
-            <div class="w-16 h-16 bg-gray-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-              <svg class="w-8 h-8 text-black" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Support personnalisé</h3>
-            <p class="text-gray-600">Accompagnement sur mesure</p>
+          <div class="relative z-10">
+            <h3 class="text-lg font-bold mb-2">Digital Ecosystem Audit</h3>
+            <p class="text-sm text-gray-300 leading-relaxed max-w-md">Not sure where to start? We provide a comprehensive audit of your current digital landscape to identify opportunities for high-impact transformation.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-20">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Nos Services</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Des solutions complètes pour votre présence en ligne
-        </p>
+  <!-- Our Process -->
+  <section class="py-24 bg-background-alt border-y border-gray-200" id="process">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 tracking-tight">Our Process</h2>
+        <p class="text-gray-600 max-w-2xl">A proven methodology that reduces risk and maximizes value delivery.</p>
       </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="card p-6 service-card">
-          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14z"/>
-            </svg>
+      <div class="relative">
+        <!-- Line connecting steps (Desktop) -->
+        <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 z-0"></div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+          <!-- Step 1 -->
+          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-0 md:mb-12">
+            <div class="h-10 w-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-4 text-sm shadow-md">01</div>
+            <h3 class="text-lg font-bold mb-2">Discovery</h3>
+            <p class="text-sm text-gray-500">Deep dive workshops to understand your business goals, pain points, and user needs.</p>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Sites vitrine</h3>
-          <p class="text-gray-600 text-sm">Création de sites web professionnels pour présenter votre activité</p>
-        </div>
-
-        <div class="card p-6 service-card">
-          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L8.1 13h7.45c.75 0 1.41-.41 1.75-1.03L21.7 4H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
-            </svg>
+          <!-- Step 2 -->
+          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-12 md:mb-0">
+            <div class="h-10 w-10 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold mb-4 text-sm shadow-md">02</div>
+            <h3 class="text-lg font-bold mb-2">Strategy</h3>
+            <p class="text-sm text-gray-500">Developing a roadmap, technical architecture, and implementation plan aligned with ROI.</p>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">E-commerce</h3>
-          <p class="text-gray-600 text-sm">Boutiques en ligne pour vendre vos produits</p>
-        </div>
-
-        <div class="card p-6 service-card">
-          <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
-            </svg>
+          <!-- Step 3 -->
+          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-0 md:mb-12">
+            <div class="h-10 w-10 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold mb-4 text-sm shadow-md">03</div>
+            <h3 class="text-lg font-bold mb-2">Implementation</h3>
+            <p class="text-sm text-gray-500">Agile development cycles with regular demos and feedback loops to ensure quality.</p>
           </div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2">Système de réservation</h3>
-          <p class="text-gray-600 text-sm">Intégration de systèmes de réservation</p>
-        </div>
-
-                 <div class="card p-6 service-card">
-           <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-             <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-             </svg>
-           </div>
-           <h3 class="text-lg font-bold text-gray-900 mb-2">Plateformes sur mesure</h3>
-           <p class="text-gray-600 text-sm">Création de plateformes personnalisées selon vos besoins</p>
-         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process Section -->
-  <section id="process" class="py-20 gradient-section">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Notre Processus</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Une approche simple et efficace en 4 étapes
-        </p>
-      </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="text-center step">
-          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 relative">
-            <span class="text-2xl font-bold text-black">1</span>
-            <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-0.5 bg-gray-300 hidden lg:block"></div>
+          <!-- Step 4 -->
+          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-12 md:mb-0">
+            <div class="h-10 w-10 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold mb-4 text-sm shadow-md">04</div>
+            <h3 class="text-lg font-bold mb-2">Optimization</h3>
+            <p class="text-sm text-gray-500">Continuous monitoring, data analysis, and iterative improvements for long-term success.</p>
           </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Consultation</h3>
-          <p class="text-gray-600">Discussion de vos besoins et objectifs</p>
-        </div>
-
-        <div class="text-center step">
-          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 relative">
-            <span class="text-2xl font-bold text-black">2</span>
-            <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-0.5 bg-gray-300 hidden lg:block"></div>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Design</h3>
-          <p class="text-gray-600">Création de maquettes personnalisées</p>
-        </div>
-
-        <div class="text-center step">
-          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 relative">
-            <span class="text-2xl font-bold text-black">3</span>
-            <div class="absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-0.5 bg-gray-300 hidden lg:block"></div>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Développement</h3>
-          <p class="text-gray-600">Intégration et développement du site</p>
-        </div>
-
-        <div class="text-center step">
-          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <span class="text-2xl font-bold text-black">4</span>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-4">Livraison</h3>
-          <p class="text-gray-600">Mise en ligne et formation</p>
         </div>
       </div>
     </div>
   </section>
 
-
-
-  <!-- Testimonials Section -->
-  <section class="py-20 gradient-section">
-    <div class="container">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Témoignages</h2>
-        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-          Ce que nos clients disent de nous
-        </p>
+  <!-- Why Orcamo -->
+  <section class="py-24 bg-white">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-16 items-center">
+      <div class="flex-1 w-full order-2 lg:order-1">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="flex gap-4 items-start">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <div>
+              <h4 class="font-bold text-primary text-lg">ROI-Focused</h4>
+              <p class="text-sm text-gray-500 mt-1">We prioritize initiatives that deliver measurable business value.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <div>
+              <h4 class="font-bold text-primary text-lg">Senior Experts</h4>
+              <p class="text-sm text-gray-500 mt-1">Work directly with veterans in engineering and product strategy.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <div>
+              <h4 class="font-bold text-primary text-lg">Agile & Transparent</h4>
+              <p class="text-sm text-gray-500 mt-1">Full visibility into our progress with weekly sprint reports.</p>
+            </div>
+          </div>
+          <div class="flex gap-4 items-start">
+            <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+            <div>
+              <h4 class="font-bold text-primary text-lg">Future-Proof</h4>
+              <p class="text-sm text-gray-500 mt-1">Solutions built to adapt to emerging technologies and market shifts.</p>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="card p-8 testimonial-card">
-          <div class="flex items-center mb-6">
-            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
-              <span class="text-black font-bold">Y</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-gray-900">Youssef B.</h4>
-              <p class="text-gray-600 text-sm">Entrepreneur</p>
-            </div>
-          </div>
-          <p class="text-gray-700 italic">"Orcamo a livré mon site en 5 jours, très satisfait du résultat et du service !"</p>
-        </div>
-
-        <div class="card p-8 testimonial-card">
-          <div class="flex items-center mb-6">
-            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
-              <span class="text-black font-bold">S</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-gray-900">Salma D.</h4>
-              <p class="text-gray-600 text-sm">Boutique en ligne</p>
-            </div>
-          </div>
-          <p class="text-gray-700 italic">"Service professionnel, rapide et humain. Mon site e-commerce fonctionne parfaitement !"</p>
-        </div>
-
-        <div class="card p-8 testimonial-card">
-          <div class="flex items-center mb-6">
-            <div class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mr-4">
-              <span class="text-black font-bold">A</span>
-            </div>
-            <div>
-              <h4 class="font-bold text-gray-900">Ahmed M.</h4>
-              <p class="text-gray-600 text-sm">Restaurant</p>
-            </div>
-          </div>
-          <p class="text-gray-700 italic">"Excellent rapport qualité-prix. Le système de réservation intégré fonctionne très bien."</p>
-        </div>
+      <div class="flex-1 order-1 lg:order-2">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6 tracking-tight">Why Leading Brands Choose Orcamo</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          In a world of generic agencies, we stand out by being true partners. We take ownership of the outcome, ensuring that our technical delivery matches your strategic vision perfectly.
+        </p>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-20">
-    <div class="container">
-      <div class="max-w-4xl mx-auto">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Contactez-nous</h2>
-          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            Prêt à démarrer votre projet ? Parlons-en !
+  <section class="py-24 bg-primary text-white" id="contact">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row gap-16">
+        <div class="lg:w-1/2">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Ready to Scale?</h2>
+          <p class="text-gray-300 text-lg mb-10 leading-relaxed">
+            Let's discuss how digital transformation can unlock new revenue streams and efficiency for your organization. Schedule a free consultation with our experts.
           </p>
+          <div class="space-y-6">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <span class="material-symbols-outlined">mail</span>
+              </div>
+              <span class="text-lg font-medium">orcamo.services&#64;gmail.com</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <span class="material-symbols-outlined">call</span>
+              </div>
+              <span class="text-lg font-medium">+212 6 06 85 98 86</span>
+            </div>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <span class="text-lg font-medium">Morocco</span>
+            </div>
+          </div>
         </div>
-
-        <div class="grid lg:grid-cols-2 gap-12">
-          <!-- Contact Form -->
-          <div class="card p-8">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">Demander un devis</h3>
-            
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="space-y-6" action="https://formspree.io/f/mqalywdz" method="POST">
-              <!-- Hidden fields for Formspree -->
-              <input type="hidden" name="_subject" value="Nouveau devis Orcamo" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="table" />
-              
-              <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom complet *</label>
+        <div class="lg:w-1/2">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="bg-white rounded-2xl p-8 text-primary shadow-2xl" action="https://formspree.io/f/mqalywdz" method="POST">
+            <h3 class="text-2xl font-bold mb-6">Contact Us</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div class="flex flex-col gap-1">
+                <label class="text-sm font-semibold text-gray-700">First Name</label>
                 <input 
-                  type="text" 
-                  id="name"
-                  name="name"
-                  formControlName="name"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
-                  placeholder="Votre nom"
-                >
-                <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="text-red-500 text-sm mt-1">
-                  {{ getErrorMessage('name') }}
+                  class="w-full h-11 px-3 rounded-md border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary bg-gray-50" 
+                  placeholder="John" 
+                  type="text"
+                  formControlName="firstName"
+                  name="firstName"
+                />
+                <div *ngIf="contactForm.get('firstName')?.invalid && contactForm.get('firstName')?.touched" class="text-red-500 text-sm mt-1">
+                  {{ getErrorMessage('firstName') }}
                 </div>
               </div>
-
-              <div>
-                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+              <div class="flex flex-col gap-1">
+                <label class="text-sm font-semibold text-gray-700">Last Name</label>
                 <input 
-                  type="email" 
-                  id="email"
-                  name="email"
+                  class="w-full h-11 px-3 rounded-md border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary bg-gray-50" 
+                  placeholder="Doe" 
+                  type="text"
+                  formControlName="lastName"
+                  name="lastName"
+                />
+                <div *ngIf="contactForm.get('lastName')?.invalid && contactForm.get('lastName')?.touched" class="text-red-500 text-sm mt-1">
+                  {{ getErrorMessage('lastName') }}
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+              <div class="flex flex-col gap-1">
+                <label class="text-sm font-semibold text-gray-700">Email</label>
+                <input 
+                  class="w-full h-11 px-3 rounded-md border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary bg-gray-50" 
+                  placeholder="john@company.com" 
+                  type="email"
                   formControlName="email"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
-                  placeholder="votre@email.com"
-                >
+                  name="email"
+                />
                 <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="text-red-500 text-sm mt-1">
                   {{ getErrorMessage('email') }}
                 </div>
               </div>
-
-              <div>
-                <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Service souhaité *</label>
-                <select 
-                  id="service"
-                  name="service"
-                  formControlName="service"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200"
-                >
-                  <option value="">Sélectionnez un service</option>
-                  <option value="site-vitrine">Site vitrine</option>
-                  <option value="e-commerce">E-commerce</option>
-                  <option value="sur-mesure">Sur mesure</option>
-                  <option value="autre">Autre</option>
-                </select>
-                <div *ngIf="contactForm.get('service')?.invalid && contactForm.get('service')?.touched" class="text-red-500 text-sm mt-1">
-                  {{ getErrorMessage('service') }}
+              <div class="flex flex-col gap-1">
+                <label class="text-sm font-semibold text-gray-700">Company</label>
+                <input 
+                  class="w-full h-11 px-3 rounded-md border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary bg-gray-50" 
+                  placeholder="Company Name" 
+                  type="text"
+                  formControlName="company"
+                  name="company"
+                />
+                <div *ngIf="contactForm.get('company')?.invalid && contactForm.get('company')?.touched" class="text-red-500 text-sm mt-1">
+                  {{ getErrorMessage('company') }}
                 </div>
               </div>
-
-              <div>
-                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                <textarea 
-                  id="message"
-                  name="message"
-                  formControlName="message"
-                  rows="4"
-                  class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-200 resize-none"
-                  placeholder="Décrivez votre projet..."
-                ></textarea>
-                <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-red-500 text-sm mt-1">
-                  {{ getErrorMessage('message') }}
-                </div>
-              </div>
-
-              <button 
-                type="submit" 
-                class="btn btn-primary w-full"
-                [disabled]="contactForm.invalid || isSubmitted"
+            </div>
+            <div class="flex flex-col gap-1 mb-6">
+              <label class="text-sm font-semibold text-gray-700">Project Type</label>
+              <select 
+                class="w-full h-11 px-3 rounded-md border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary bg-gray-50"
+                formControlName="projectType"
+                name="projectType"
               >
-                <span *ngIf="!isSubmitted">Envoyer le message</span>
-                <span *ngIf="isSubmitted">Message envoyé !</span>
-              </button>
-            </form>
-          </div>
-
-          <!-- Contact Info -->
-          <div class="space-y-8">
-            <div class="card p-8">
-              <h3 class="text-2xl font-bold text-gray-900 mb-6">Informations de contact</h3>
-              
-                             <div class="space-y-6">
-                 <div class="flex items-center">
-                  <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mr-4">
-                    <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900">Téléphone</h4>
-                    <p class="text-gray-600">+212 6 06 85 98 86</p>
-                  </div>
-                </div>
-
-                <div class="flex items-center">
-                  <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center mr-4">
-                    <svg class="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 class="font-bold text-gray-900">Email</h4>
-                    <p class="text-gray-600">orcamo.services&#64;gmail.com</p>
-                  </div>
-                </div>
+                <option value="">Select a project type</option>
+                <option value="Digital Strategy Consulting">Digital Strategy Consulting</option>
+                <option value="Cloud Migration">Cloud Migration</option>
+                <option value="Custom Development">Custom Development</option>
+                <option value="Other">Other</option>
+              </select>
+              <div *ngIf="contactForm.get('projectType')?.invalid && contactForm.get('projectType')?.touched" class="text-red-500 text-sm mt-1">
+                {{ getErrorMessage('projectType') }}
               </div>
-                         </div>
-          </div>
+            </div>
+            <div class="flex flex-col gap-1 mb-8">
+              <label class="text-sm font-semibold text-gray-700">Message</label>
+              <textarea 
+                class="w-full p-3 rounded-md border border-gray-300 focus:border-primary focus:ring-1 focus:ring-primary bg-gray-50 h-32 resize-none" 
+                placeholder="Tell us about your goals..."
+                formControlName="message"
+                name="message"
+              ></textarea>
+              <div *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched" class="text-red-500 text-sm mt-1">
+                {{ getErrorMessage('message') }}
+              </div>
+            </div>
+            <button 
+              class="w-full h-12 bg-primary hover:bg-black text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2" 
+              type="submit"
+              [disabled]="contactForm.invalid || isSubmitted"
+            >
+              <span *ngIf="!isSubmitted">Talk to a Digital Expert</span>
+              <span *ngIf="isSubmitted">Message Sent!</span>
+              <span *ngIf="!isSubmitted" class="material-symbols-outlined text-sm">arrow_forward</span>
+            </button>
+          </form>
         </div>
       </div>
     </div>
@@ -396,6 +392,6 @@
 <app-site-footer></app-site-footer>
 
 <!-- WhatsApp FAB -->
- <div class="fixed bottom-0 right-0">
-   <app-whatsapp-fab></app-whatsapp-fab>
- </div>
+<div class="fixed bottom-0 right-0">
+  <app-whatsapp-fab></app-whatsapp-fab>
+</div>
