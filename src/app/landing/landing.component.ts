@@ -40,7 +40,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.setupScrollAnimations();
+    // Small delay to ensure DOM is fully rendered
+    setTimeout(() => {
+      this.setupScrollAnimations();
+      this.animateHeroSection();
+    }, 100);
   }
 
   handleScroll(): void {
@@ -54,24 +58,95 @@ export class LandingComponent implements OnInit, AfterViewInit {
     }
   }
 
+  animateHeroSection(): void {
+    // Animate hero elements on load
+    const heroBadge = document.querySelector('.hero-badge');
+    const heroTitle = document.querySelector('.hero-title');
+    const heroDescription = document.querySelector('.hero-description');
+    const heroButtons = document.querySelectorAll('.hero-button');
+    const heroImage = document.querySelector('.hero-image');
+    const heroCard = document.querySelector('.hero-card');
+    const heroLogos = document.querySelectorAll('.hero-logo');
+
+    if (heroBadge) {
+      setTimeout(() => heroBadge.classList.add('animate-fade-in-up'), 100);
+    }
+    if (heroTitle) {
+      setTimeout(() => heroTitle.classList.add('animate-fade-in-up'), 200);
+    }
+    if (heroDescription) {
+      setTimeout(() => heroDescription.classList.add('animate-fade-in-up'), 300);
+    }
+    heroButtons.forEach((btn, index) => {
+      setTimeout(() => btn.classList.add('animate-fade-in-up'), 400 + (index * 100));
+    });
+    if (heroImage) {
+      setTimeout(() => heroImage.classList.add('animate-scale-in'), 500);
+    }
+    if (heroCard) {
+      setTimeout(() => heroCard.classList.add('animate-slide-up'), 700);
+    }
+    heroLogos.forEach((logo, index) => {
+      setTimeout(() => logo.classList.add('animate-fade-in'), 800 + (index * 100));
+    });
+  }
+
   setupScrollAnimations(): void {
     const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
+      threshold: 0.15,
+      rootMargin: '0px 0px -100px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    // Main section observer
+    const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in-up');
+          entry.target.classList.add('section-visible');
+          // Stop observing once animated
+          sectionObserver.unobserve(entry.target);
         }
       });
     }, observerOptions);
 
-    // Observe elements for animation
-    const animateElements = document.querySelectorAll('.service-card, .step, .testimonial-card');
-    animateElements.forEach(el => {
-      observer.observe(el);
+    // Staggered children observer
+    const staggerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const children = entry.target.querySelectorAll('.animate-on-scroll');
+          children.forEach((child, index) => {
+            setTimeout(() => {
+              child.classList.add('animate-fade-in-up');
+            }, index * 100);
+          });
+          staggerObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observe all sections
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+      sectionObserver.observe(section);
+    });
+
+    // Observe staggered containers
+    const staggerContainers = document.querySelectorAll('.stagger-container');
+    staggerContainers.forEach(container => {
+      staggerObserver.observe(container);
+    });
+
+    // Observe individual animated elements
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach(el => {
+      const elementObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fade-in-up');
+            elementObserver.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+      elementObserver.observe(el);
     });
   }
 

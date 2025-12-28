@@ -10,21 +10,21 @@
   <section class="relative pt-20 pb-32 overflow-hidden">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
       <div class="flex-1 flex flex-col gap-8">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background-alt w-fit border border-gray-200">
+        <div class="hero-badge inline-flex items-center gap-2 px-3 py-1 rounded-full bg-background-alt w-fit border border-gray-200">
           <span class="w-2 h-2 rounded-full bg-green-500"></span>
           <span class="text-xs font-semibold uppercase tracking-wide text-gray-600">Enterprise Solutions</span>
         </div>
-        <h1 class="text-5xl lg:text-6xl font-extrabold text-primary dark:text-white leading-[1.1] tracking-tight">
+        <h1 class="hero-title text-5xl lg:text-6xl font-extrabold text-primary dark:text-white leading-[1.1] tracking-tight">
           We Transform Businesses Through <span class="text-gray-500">Digital Solutions</span>
         </h1>
-        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">
+        <p class="hero-description text-lg text-gray-600 dark:text-gray-300 max-w-xl leading-relaxed">
           Strategic consulting and scalable technology implementation for the modern enterprise. We bridge the gap between ambitious business goals and flawless technical execution.
         </p>
         <div class="flex flex-wrap gap-4 pt-2">
-          <a class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-black text-white text-base font-bold transition-all shadow-lg hover:shadow-xl cursor-pointer" (click)="scrollToSection('contact')">
+          <a class="hero-button flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-black text-white text-base font-bold transition-all shadow-lg hover:shadow-xl cursor-pointer hover-lift" (click)="scrollToSection('contact')">
             Get a Strategy Audit
           </a>
-          <a class="flex items-center justify-center rounded-lg h-12 px-8 bg-white border border-gray-200 hover:bg-gray-50 text-primary text-base font-bold transition-all cursor-pointer" (click)="scrollToSection('solutions')">
+          <a class="hero-button flex items-center justify-center rounded-lg h-12 px-8 bg-white border border-gray-200 hover:bg-gray-50 text-primary text-base font-bold transition-all cursor-pointer hover-lift" (click)="scrollToSection('solutions')">
             View Our Work
           </a>
         </div>
@@ -32,19 +32,19 @@
           <p class="text-sm font-medium text-gray-500 mb-4">Trusted by industry leaders</p>
           <div class="flex gap-8 opacity-60 grayscale">
             <!-- Simple CSS Logo Replacements for layout -->
-            <div class="flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">change_history</span> Acme</div>
-            <div class="flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">circle</span> Global</div>
-            <div class="flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">square</span> Nexus</div>
-            <div class="flex items-center gap-2 font-bold text-xl font-display text-gray-400 hidden sm:flex"><span class="material-symbols-outlined">pentagon</span> Vertex</div>
+            <div class="hero-logo flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">change_history</span> Acme</div>
+            <div class="hero-logo flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">circle</span> Global</div>
+            <div class="hero-logo flex items-center gap-2 font-bold text-xl font-display text-gray-400"><span class="material-symbols-outlined">square</span> Nexus</div>
+            <div class="hero-logo flex items-center gap-2 font-bold text-xl font-display text-gray-400 hidden sm:flex"><span class="material-symbols-outlined">pentagon</span> Vertex</div>
           </div>
         </div>
       </div>
       <div class="flex-1 w-full lg:max-w-[600px]">
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
+        <div class="hero-image relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/3] group">
           <div class="absolute inset-0 bg-primary/10 group-hover:bg-primary/5 transition-colors z-10"></div>
           <div class="w-full h-full bg-cover bg-center" data-alt="Modern minimalist office interior with glass walls" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8_mipgIaHlZYbw7UcbrnCbtYaZosb1PU2VoxFCmD50KKG_KTwd8zCHHx8OmG0hxsJ7ZDvgDQbmRwq1qB90FnLvh-zrXXfLOGz7Pw1rpbrrCbP_gugz4nnjgzprIZw9DJ_4UBwOSDRRN9xa7W7ZCoWa_GG_HEfGyggkfBxA5ir6XW2MI7W7j4hw5ICJiGNl02SKm95cq2Lm9voQsrxzgltLhZarG2axRR6st8uCoSp7vj-GGKmVMZDfED-G1w836_IWQkDiuznnn0');"></div>
           <!-- Floating Card Decoration -->
-          <div class="absolute bottom-8 left-8 right-8 z-20 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-100 hidden sm:block">
+          <div class="hero-card absolute bottom-8 left-8 right-8 z-20 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-100 hidden sm:block">
             <div class="flex items-start justify-between">
               <div>
                 <p class="text-sm text-gray-500 font-medium">Growth Impact</p>
@@ -67,19 +67,19 @@
   <section class="py-24 bg-background-alt" id="about">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
-        <div class="max-w-2xl">
+        <div class="max-w-2xl animate-on-scroll">
           <h2 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-2">About Orcamo</h2>
           <h3 class="text-3xl md:text-4xl font-bold text-primary dark:text-white tracking-tight">
             Building digital ecosystems that drive sustainable business growth.
           </h3>
         </div>
-        <p class="max-w-md text-gray-600 dark:text-gray-400 leading-relaxed">
+        <p class="max-w-md text-gray-600 dark:text-gray-400 leading-relaxed animate-on-scroll">
           We don't just build software; we architect the future of your company through three fundamental pillars of transformation.
         </p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="stagger-container grid grid-cols-1 md:grid-cols-3 gap-8">
         <!-- Pillar 1 -->
-        <div class="group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+        <div class="animate-on-scroll group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all hover-lift">
           <div class="h-12 w-12 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-center justify-center text-primary dark:text-white mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined">strategy</span>
           </div>
@@ -89,7 +89,7 @@
           </p>
         </div>
         <!-- Pillar 2 -->
-        <div class="group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+        <div class="animate-on-scroll group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all hover-lift">
           <div class="h-12 w-12 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-center justify-center text-primary dark:text-white mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined">memory</span>
           </div>
@@ -99,7 +99,7 @@
           </p>
         </div>
         <!-- Pillar 3 -->
-        <div class="group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+        <div class="animate-on-scroll group bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all hover-lift">
           <div class="h-12 w-12 bg-gray-50 dark:bg-gray-700 rounded-lg flex items-center justify-center text-primary dark:text-white mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
             <span class="material-symbols-outlined">monitoring</span>
           </div>
@@ -116,48 +116,48 @@
   <section class="py-24 bg-white dark:bg-background-dark" id="solutions">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4 tracking-tight">Our Digital Transformation Solutions</h2>
-        <p class="text-gray-600 dark:text-gray-400">Comprehensive services designed to modernize your operations and elevate your customer experience.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary dark:text-white mb-4 tracking-tight animate-on-scroll">Our Digital Transformation Solutions</h2>
+        <p class="text-gray-600 dark:text-gray-400 animate-on-scroll">Comprehensive services designed to modernize your operations and elevate your customer experience.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div class="stagger-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         <!-- Solution 1 -->
-        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+        <div class="animate-on-scroll p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white hover-lift">
           <span class="material-symbols-outlined text-primary mb-4 text-3xl">cloud_upload</span>
           <h3 class="text-lg font-bold mb-2">Cloud Migration</h3>
           <p class="text-sm text-gray-500 leading-relaxed">Seamlessly moving legacy infrastructure to secure, scalable cloud environments.</p>
         </div>
         <!-- Solution 2 -->
-        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+        <div class="animate-on-scroll p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white hover-lift">
           <span class="material-symbols-outlined text-primary mb-4 text-3xl">psychology</span>
           <h3 class="text-lg font-bold mb-2">AI Integration</h3>
           <p class="text-sm text-gray-500 leading-relaxed">Leveraging machine learning to automate processes and gain predictive insights.</p>
         </div>
         <!-- Solution 3 -->
-        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+        <div class="animate-on-scroll p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white hover-lift">
           <span class="material-symbols-outlined text-primary mb-4 text-3xl">code_blocks</span>
           <h3 class="text-lg font-bold mb-2">Custom Development</h3>
           <p class="text-sm text-gray-500 leading-relaxed">Bespoke software solutions tailored exactly to your unique business logic.</p>
         </div>
         <!-- Solution 4 -->
-        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+        <div class="animate-on-scroll p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white hover-lift">
           <span class="material-symbols-outlined text-primary mb-4 text-3xl">smartphone</span>
           <h3 class="text-lg font-bold mb-2">Mobile Experience</h3>
           <p class="text-sm text-gray-500 leading-relaxed">Native and cross-platform mobile apps that engage users on the go.</p>
         </div>
         <!-- Solution 5 -->
-        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+        <div class="animate-on-scroll p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white hover-lift">
           <span class="material-symbols-outlined text-primary mb-4 text-3xl">database</span>
           <h3 class="text-lg font-bold mb-2">Data Analytics</h3>
           <p class="text-sm text-gray-500 leading-relaxed">Turning raw data into actionable dashboards for better decision making.</p>
         </div>
         <!-- Solution 6 -->
-        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white">
+        <div class="animate-on-scroll p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-white hover-lift">
           <span class="material-symbols-outlined text-primary mb-4 text-3xl">security</span>
           <h3 class="text-lg font-bold mb-2">Cybersecurity</h3>
           <p class="text-sm text-gray-500 leading-relaxed">Enterprise-grade security audits and implementation to protect your assets.</p>
         </div>
         <!-- Solution 7 (Spans 2 cols on large screens to fill grid nicely) -->
-        <div class="p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-primary text-white md:col-span-2 xl:col-span-2 flex flex-col justify-center relative overflow-hidden group">
+        <div class="animate-on-scroll p-6 rounded-lg border border-gray-100 hover:border-gray-300 transition-colors bg-primary text-white md:col-span-2 xl:col-span-2 flex flex-col justify-center relative overflow-hidden group hover-lift">
           <div class="absolute right-0 bottom-0 opacity-10 transform translate-x-10 translate-y-10 group-hover:scale-110 transition-transform">
             <span class="material-symbols-outlined text-[150px]">rocket_launch</span>
           </div>
@@ -174,33 +174,33 @@
   <section class="py-24 bg-background-alt border-y border-gray-200" id="process">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 tracking-tight">Our Process</h2>
-        <p class="text-gray-600 max-w-2xl">A proven methodology that reduces risk and maximizes value delivery.</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 tracking-tight animate-on-scroll">Our Process</h2>
+        <p class="text-gray-600 max-w-2xl animate-on-scroll">A proven methodology that reduces risk and maximizes value delivery.</p>
       </div>
       <div class="relative">
         <!-- Line connecting steps (Desktop) -->
         <div class="hidden md:block absolute top-1/2 left-0 w-full h-0.5 bg-gray-200 -translate-y-1/2 z-0"></div>
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
+        <div class="stagger-container grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
           <!-- Step 1 -->
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-0 md:mb-12">
+          <div class="animate-on-scroll bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-0 md:mb-12 hover-lift">
             <div class="h-10 w-10 bg-primary text-white rounded-full flex items-center justify-center font-bold mb-4 text-sm shadow-md">01</div>
             <h3 class="text-lg font-bold mb-2">Discovery</h3>
             <p class="text-sm text-gray-500">Deep dive workshops to understand your business goals, pain points, and user needs.</p>
           </div>
           <!-- Step 2 -->
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-12 md:mb-0">
+          <div class="animate-on-scroll bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-12 md:mb-0 hover-lift">
             <div class="h-10 w-10 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold mb-4 text-sm shadow-md">02</div>
             <h3 class="text-lg font-bold mb-2">Strategy</h3>
             <p class="text-sm text-gray-500">Developing a roadmap, technical architecture, and implementation plan aligned with ROI.</p>
           </div>
           <!-- Step 3 -->
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-0 md:mb-12">
+          <div class="animate-on-scroll bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-0 md:mb-12 hover-lift">
             <div class="h-10 w-10 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold mb-4 text-sm shadow-md">03</div>
             <h3 class="text-lg font-bold mb-2">Implementation</h3>
             <p class="text-sm text-gray-500">Agile development cycles with regular demos and feedback loops to ensure quality.</p>
           </div>
           <!-- Step 4 -->
-          <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-12 md:mb-0">
+          <div class="animate-on-scroll bg-white p-6 rounded-xl border border-gray-100 shadow-sm md:mt-12 md:mb-0 hover-lift">
             <div class="h-10 w-10 bg-white border-2 border-primary text-primary rounded-full flex items-center justify-center font-bold mb-4 text-sm shadow-md">04</div>
             <h3 class="text-lg font-bold mb-2">Optimization</h3>
             <p class="text-sm text-gray-500">Continuous monitoring, data analysis, and iterative improvements for long-term success.</p>
@@ -214,29 +214,29 @@
   <section class="py-24 bg-white">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-16 items-center">
       <div class="flex-1 w-full order-2 lg:order-1">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="flex gap-4 items-start">
+        <div class="stagger-container grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="animate-on-scroll flex gap-4 items-start">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
             <div>
               <h4 class="font-bold text-primary text-lg">ROI-Focused</h4>
               <p class="text-sm text-gray-500 mt-1">We prioritize initiatives that deliver measurable business value.</p>
             </div>
           </div>
-          <div class="flex gap-4 items-start">
+          <div class="animate-on-scroll flex gap-4 items-start">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
             <div>
               <h4 class="font-bold text-primary text-lg">Senior Experts</h4>
               <p class="text-sm text-gray-500 mt-1">Work directly with veterans in engineering and product strategy.</p>
             </div>
           </div>
-          <div class="flex gap-4 items-start">
+          <div class="animate-on-scroll flex gap-4 items-start">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
             <div>
               <h4 class="font-bold text-primary text-lg">Agile & Transparent</h4>
               <p class="text-sm text-gray-500 mt-1">Full visibility into our progress with weekly sprint reports.</p>
             </div>
           </div>
-          <div class="flex gap-4 items-start">
+          <div class="animate-on-scroll flex gap-4 items-start">
             <span class="material-symbols-outlined text-primary mt-1">check_circle</span>
             <div>
               <h4 class="font-bold text-primary text-lg">Future-Proof</h4>
@@ -246,8 +246,8 @@
         </div>
       </div>
       <div class="flex-1 order-1 lg:order-2">
-        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6 tracking-tight">Why Leading Brands Choose Orcamo</h2>
-        <p class="text-lg text-gray-600 leading-relaxed">
+        <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6 tracking-tight animate-on-scroll">Why Leading Brands Choose Orcamo</h2>
+        <p class="text-lg text-gray-600 leading-relaxed animate-on-scroll">
           In a world of generic agencies, we stand out by being true partners. We take ownership of the outcome, ensuring that our technical delivery matches your strategic vision perfectly.
         </p>
       </div>
@@ -259,24 +259,24 @@
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col lg:flex-row gap-16">
         <div class="lg:w-1/2">
-          <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Ready to Scale?</h2>
-          <p class="text-gray-300 text-lg mb-10 leading-relaxed">
+          <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tight animate-on-scroll">Ready to Scale?</h2>
+          <p class="text-gray-300 text-lg mb-10 leading-relaxed animate-on-scroll">
             Let's discuss how digital transformation can unlock new revenue streams and efficiency for your organization. Schedule a free consultation with our experts.
           </p>
           <div class="space-y-6">
-            <div class="flex items-center gap-4">
+            <div class="animate-on-scroll flex items-center gap-4">
               <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                 <span class="material-symbols-outlined">mail</span>
               </div>
               <span class="text-lg font-medium">orcamo.services&#64;gmail.com</span>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="animate-on-scroll flex items-center gap-4">
               <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                 <span class="material-symbols-outlined">call</span>
               </div>
               <span class="text-lg font-medium">+212 6 06 85 98 86</span>
             </div>
-            <div class="flex items-center gap-4">
+            <div class="animate-on-scroll flex items-center gap-4">
               <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
                 <span class="material-symbols-outlined">location_on</span>
               </div>
@@ -285,7 +285,7 @@
           </div>
         </div>
         <div class="lg:w-1/2">
-          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="bg-white rounded-2xl p-8 text-primary shadow-2xl" action="https://formspree.io/f/mqalywdz" method="POST">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="animate-on-scroll bg-white rounded-2xl p-8 text-primary shadow-2xl" action="https://formspree.io/f/mqalywdz" method="POST">
             <h3 class="text-2xl font-bold mb-6">Contact Us</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div class="flex flex-col gap-1">
