@@ -250,6 +250,20 @@
     transform: translateY(0);
   }
 
+  /* Fallback: Ensure content is visible after a delay (production safety) */
+  @media (prefers-reduced-motion: no-preference) {
+    .animate-on-scroll {
+      animation: fadeInFallback 0.1s ease-out 1s forwards;
+    }
+  }
+
+  @keyframes fadeInFallback {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   /* Stagger container */
   .stagger-container .animate-on-scroll {
     transition-delay: 0s;
