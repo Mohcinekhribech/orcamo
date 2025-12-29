@@ -2,7 +2,7 @@
 <app-site-header></app-site-header>
 
 <!-- Main Content -->
-<div class="relative flex flex-col items-center bg-background-light dark:bg-background-dark min-h-screen" *ngIf="article">
+<div class="relative flex flex-col items-center bg-white dark:bg-background-dark min-h-screen" *ngIf="article">
   <main class="w-full max-w-[1000px] px-4 sm:px-6 lg:px-8 py-16 flex flex-col gap-10" itemscope itemtype="https://schema.org/BlogPosting">
     <!-- Breadcrumb -->
     <nav aria-label="Breadcrumb" class="flex items-center gap-2 text-xs font-medium text-gray-500 uppercase tracking-wide animate-on-scroll">
@@ -151,7 +151,7 @@
 </div>
 
 <!-- Loading State -->
-<div *ngIf="loading" class="flex items-center justify-center min-h-screen">
+<div *ngIf="loading" class="flex items-center justify-center min-h-screen bg-white dark:bg-background-dark">
   <div class="text-center">
     <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
     <p class="text-gray-600 dark:text-gray-400">Loading article...</p>
