@@ -13,19 +13,19 @@
       <div>
         <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-gray-500">Company</h4>
         <ul class="space-y-3">
-          <li><a class="text-sm text-gray-300 hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('about')">About Us</a></li>
-          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="#">Careers</a></li>
-          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="#">Partners</a></li>
-          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="#">Blog</a></li>
+          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="/#about" (click)="scrollToSection('about'); $event.preventDefault()">About Us</a></li>
+          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="/#careers">Careers</a></li>
+          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="/#partners">Partners</a></li>
+          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="/blog">Blog</a></li>
         </ul>
       </div>
       <div>
         <h4 class="font-bold text-sm uppercase tracking-wider mb-4 text-gray-500">Solutions</h4>
         <ul class="space-y-3">
-          <li><a class="text-sm text-gray-300 hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('solutions')">Strategy</a></li>
-          <li><a class="text-sm text-gray-300 hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('solutions')">Cloud & Infrastructure</a></li>
-          <li><a class="text-sm text-gray-300 hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('solutions')">Data & AI</a></li>
-          <li><a class="text-sm text-gray-300 hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('solutions')">Cybersecurity</a></li>
+          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="/#solutions" (click)="scrollToSection('solutions'); $event.preventDefault()">Strategy</a></li>
+          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="/#solutions" (click)="scrollToSection('solutions'); $event.preventDefault()">Cloud & Infrastructure</a></li>
+          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="/#solutions" (click)="scrollToSection('solutions'); $event.preventDefault()">Data & AI</a></li>
+          <li><a class="text-sm text-gray-300 hover:text-white transition-colors" href="/#solutions" (click)="scrollToSection('solutions'); $event.preventDefault()">Cybersecurity</a></li>
         </ul>
       </div>
       <div>
@@ -47,8 +47,8 @@
     <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="text-sm text-gray-500">© {{ currentYear }} Orcamo Inc. All rights reserved.</p>
       <div class="flex gap-6">
-        <a class="text-sm text-gray-500 hover:text-white transition-colors" href="#">Privacy Policy</a>
-        <a class="text-sm text-gray-500 hover:text-white transition-colors" href="#">Terms of Service</a>
+        <a class="text-sm text-gray-500 hover:text-white transition-colors" href="/privacy-policy">Privacy Policy</a>
+        <a class="text-sm text-gray-500 hover:text-white transition-colors" href="/terms-of-service">Terms of Service</a>
       </div>
     </div>
   </div>

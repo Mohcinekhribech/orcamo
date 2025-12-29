@@ -8,16 +8,16 @@
     
     <!-- Desktop Nav -->
     <nav class="hidden md:flex items-center gap-8">
-      <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('solutions')">Solutions</a>
-      <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('process')">Process</a>
-      <a routerLink="/blog" class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors">Insights</a>
-      <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('about')">About</a>
-      <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('contact')">Contact</a>
+      <a href="/#solutions" class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors" (click)="scrollToSection('solutions'); $event.preventDefault()">Solutions</a>
+      <a href="/#process" class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors" (click)="scrollToSection('process'); $event.preventDefault()">Process</a>
+      <a routerLink="/blog" href="/blog" class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors">Insights</a>
+      <a href="/#about" class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors" (click)="scrollToSection('about'); $event.preventDefault()">About</a>
+      <a href="/#contact" class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors" (click)="scrollToSection('contact'); $event.preventDefault()">Contact</a>
     </nav>
     
     <!-- CTA -->
     <div class="hidden md:block">
-      <a class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary hover:bg-black text-white text-sm font-bold transition-all shadow-sm hover:shadow-md cursor-pointer" (click)="scrollToSection('contact')">
+      <a href="/#contact" class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary hover:bg-black text-white text-sm font-bold transition-all shadow-sm hover:shadow-md" (click)="scrollToSection('contact'); $event.preventDefault()">
         Start Your Digital Transformation
       </a>
     </div>

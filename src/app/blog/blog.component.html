@@ -50,9 +50,9 @@
               </div>
             </div>
             <div class="ml-auto mt-4" *ngIf="featuredArticle.slug">
-              <a [routerLink]="['/blog', featuredArticle.slug]" class="flex items-center gap-2 text-primary dark:text-white font-bold text-sm hover:gap-3 transition-all no-underline">
-                Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span>
-              </a>
+            <a [routerLink]="['/blog', featuredArticle.slug]" [href]="'/blog/' + featuredArticle.slug" class="flex items-center gap-2 text-primary dark:text-white font-bold text-sm hover:gap-3 transition-all no-underline">
+              Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </a>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@
     <div class="mb-20 blog-section">
       <div class="flex justify-between items-end mb-8 border-b border-gray-200 dark:border-gray-800 pb-4">
         <h3 class="text-primary dark:text-white text-2xl font-bold tracking-tight">Latest Articles</h3>
-        <a class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white text-sm font-semibold transition-colors flex items-center gap-1 cursor-pointer" href="#">
+        <a routerLink="/blog" href="/blog" class="text-gray-500 hover:text-primary dark:text-gray-400 dark:hover:text-white text-sm font-semibold transition-colors flex items-center gap-1">
           View Archive <span class="material-symbols-outlined text-sm">chevron_right</span>
         </a>
       </div>
@@ -108,7 +108,7 @@
             </div>
             <h4 class="text-primary dark:text-white text-xl font-bold leading-snug group-hover:text-black dark:group-hover:text-gray-300 transition-colors">{{ article.title }}</h4>
             <p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed line-clamp-2">{{ article.description }}</p>
-            <a [routerLink]="['/blog', article.slug]" class="mt-auto pt-6 flex items-center text-primary dark:text-white font-bold text-sm no-underline">
+            <a [routerLink]="['/blog', article.slug]" [href]="'/blog/' + article.slug" class="mt-auto pt-6 flex items-center text-primary dark:text-white font-bold text-sm no-underline">
               Read more <span class="material-symbols-outlined text-[16px] ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
           </div>
