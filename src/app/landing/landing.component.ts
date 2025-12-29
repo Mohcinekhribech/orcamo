@@ -167,9 +167,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
     if (this.contactForm.valid) {
       const formData = this.contactForm.value;
       
-      // Log the payload
-      console.log('Contact form submitted:', formData);
-      
       // Create FormData for Formspree
       const formDataToSend = new FormData();
       formDataToSend.append('firstName', formData.firstName);

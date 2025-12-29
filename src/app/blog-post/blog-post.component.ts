@@ -169,11 +169,9 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
     // Load detailed content from slug-based JSON file
     this.http.get<BlogPostData>(`assets/data/blog-posts/${this.slug}.json`).subscribe({
       next: (postData) => {
-        console.log('Blog post content loaded:', postData);
         if (this.article) {
           // Merge the content into the article
           this.article.content = postData.content || [];
-          console.log('Article content set:', this.article.content);
           if (postData.publishedDate) {
             this.article.publishedDate = postData.publishedDate;
           }
