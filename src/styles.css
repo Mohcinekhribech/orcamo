@@ -308,4 +308,111 @@
   .bg-gradient-radial {
     background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, transparent 70%);
   }
+
+  /* Scrollbar utilities */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* Blog post content styling */
+  .content-spacing {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .content-spacing p {
+    @apply mb-6 text-gray-700 dark:text-gray-300;
+  }
+
+  .content-spacing h2 {
+    @apply text-2xl font-bold text-gray-900 dark:text-white mt-12 mb-4;
+  }
+
+  .content-spacing h3 {
+    @apply text-xl font-bold text-gray-900 dark:text-white mt-8 mb-3;
+  }
+
+  .content-spacing ul {
+    @apply space-y-4 my-8 text-gray-700 dark:text-gray-300;
+  }
+
+  .content-spacing li {
+    @apply flex items-start gap-4 text-gray-700 dark:text-gray-300;
+  }
+
+  .content-spacing strong {
+    @apply text-gray-900 dark:text-white font-semibold;
+  }
+
+  .content-spacing div {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  .content-spacing table {
+    @apply text-gray-700 dark:text-gray-300;
+  }
+
+  /* Responsive table styling */
+  .content-spacing .overflow-x-auto {
+    @apply -mx-4 sm:mx-0;
+  }
+
+  .content-spacing table {
+    @apply text-sm sm:text-base;
+  }
+
+  .content-spacing table th,
+  .content-spacing table td {
+    @apply p-2 sm:p-4;
+  }
+
+  /* Mobile responsive adjustments */
+  @media (max-width: 640px) {
+    .content-spacing h2 {
+      @apply text-xl mt-6 mb-3;
+    }
+
+    .content-spacing h3 {
+      @apply text-lg mt-6 mb-2;
+    }
+
+    .content-spacing p {
+      @apply mb-4;
+    }
+  }
+
+  .content-spacing .first-letter\:text-6xl::first-letter {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    float: left;
+    margin-right: 1rem;
+    margin-top: -0.5rem;
+    line-height: 1;
+  }
+
+  .content-spacing .first-letter\:float-left::first-letter {
+    float: left;
+  }
 }

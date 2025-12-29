@@ -1,0 +1,57 @@
+{
+  "categories": [
+    "All Insights",
+    "Strategy",
+    "Artificial Intelligence",
+    "Cloud Computing",
+    "Case Studies",
+    "Leadership"
+  ],
+  "featuredArticle": {
+    "id": "article-1",
+    "slug": "from-automation-to-autonomy-ai-agents-2026",
+    "title": "From Automation to Autonomy: How AI Agents Will Run Businesses in 2026",
+    "description": "The era of \"if-this-then-that\" is over. As we enter 2026, a fundamental shift is occurring. We are moving from automation to autonomy. The conversation is no longer about tools that help your team work faster; it is about AI Agents that act as digital colleagues—capable of reasoning, making decisions, and executing complex, multi-step goals without constant supervision.",
+    "category": "Artificial Intelligence",
+    "readTime": "12 min read",
+    "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop",
+    "imageAlt": "Futuristic AI neural network visualization representing autonomous agents",
+    "author": {
+      "name": "Orcamo Editorial Team",
+      "role": "Strategic Insights",
+      "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+    }
+  },
+  "articles": [
+    {
+      "id": "article-1",
+      "slug": "from-automation-to-autonomy-ai-agents-2026",
+      "title": "From Automation to Autonomy: How AI Agents Will Run Businesses in 2026",
+      "description": "The era of \"if-this-then-that\" is over. As we enter 2026, a fundamental shift is occurring. We are moving from automation to autonomy. The conversation is no longer about tools that help your team work faster; it is about AI Agents that act as digital colleagues—capable of reasoning, making decisions, and executing complex, multi-step goals without constant supervision.",
+      "category": "Artificial Intelligence",
+      "readTime": "12 min read",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&h=630&fit=crop",
+      "imageAlt": "Futuristic AI neural network visualization representing autonomous agents",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+      }
+    }
+  ],
+  "hero": {
+    "badge": "Orcamo Blog",
+    "title": "Digital Transformation Insights",
+    "description": "Strategic guidance, industry trends, and technical deep-dives for leaders navigating the modern digital economy.",
+    "backgroundImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuDkoELz9Dqxx1oYe5u_8ugo4CFRuRke_e_DSo3nHg48aUw56Er_dCCwETLhlzl6umqhx7bVsMYE5ugBVUD92aTdoZRZU4r_P5d0ov6SAYgc9GJvJ2-_IcleudIbvoQsDw3k704QDEb5PwLtQDXFfd7n_wPWpE9P5vIE8Fd_DTYYRLn5TdBQvAjw_5f0ynYb_fs2WZjOqPbdrAbmZr3eXE6CJiZ1fzHRS-gwvgyIIDLOGe-5GJVt3GU6rfF9C4AmYp106JjslqgaiIg",
+    "backgroundImageAlt": "Abstract digital network visualization with blue connections on dark background"
+  },
+  "newsletter": {
+    "title": "Stay Ahead of the Curve",
+    "description": "Get the latest digital transformation strategies, industry reports, and insights delivered directly to your inbox weekly.",
+    "placeholder": "Enter your email address",
+    "buttonText": "Subscribe",
+    "disclaimer": "No spam. Unsubscribe anytime."
+  }
+}
+

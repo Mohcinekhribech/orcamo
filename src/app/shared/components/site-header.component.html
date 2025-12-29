@@ -1,7 +1,7 @@
 <header class="sticky top-0 z-50 w-full bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
     <!-- Logo -->
-    <a href="/" class="flex items-center gap-2 no-underline">
+    <a routerLink="/" class="flex items-center gap-2 no-underline">
       <img src="assets/logo-orcamo-icon.png" alt="Orcamo" class="size-8 rounded-md">
       <h2 class="text-primary dark:text-white text-xl font-bold tracking-tight">ORCAMO</h2>
     </a>
@@ -10,6 +10,7 @@
     <nav class="hidden md:flex items-center gap-8">
       <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('solutions')">Solutions</a>
       <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('process')">Process</a>
+      <a routerLink="/blog" class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors">Insights</a>
       <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('about')">About</a>
       <a class="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-white transition-colors cursor-pointer" (click)="scrollToSection('contact')">Contact</a>
     </nav>
@@ -53,6 +54,11 @@
           >
             Process
           </button>
+        </li>
+        <li>
+          <a routerLink="/blog" class="w-full text-left text-gray-700 dark:text-gray-300 font-medium text-lg py-3 px-4 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 block" (click)="toggleMobileMenu()">
+            Insights
+          </a>
         </li>
         <li>
           <button 
