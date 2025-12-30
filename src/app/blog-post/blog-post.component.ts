@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, ChangeDetectorRef, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ChangeDetectorRef, Inject, PLATFORM_ID, ChangeDetectionStrategy } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterModule, ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
@@ -53,7 +53,8 @@ interface BlogData {
     SiteHeaderComponent,
     SiteFooterComponent
   ],
-  templateUrl: './blog-post.component.html'
+  templateUrl: './blog-post.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BlogPostComponent implements OnInit, AfterViewInit {
   article: BlogArticle | null = null;
@@ -96,9 +97,18 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    setTimeout(() => {
-      this.setupScrollAnimations();
-    }, 100);
+    if (isPlatformBrowser(this.platformId)) {
+      // Defer animations to avoid blocking initial render
+      if (typeof requestIdleCallback !== 'undefined') {
+        requestIdleCallback(() => {
+          this.setupScrollAnimations();
+        }, { timeout: 3000 });
+      } else {
+        setTimeout(() => {
+          this.setupScrollAnimations();
+        }, 500);
+      }
+    }
   }
 
   handleScroll(): void {
@@ -132,25 +142,19 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
             this.article.content = [];
           }
           
-          // Get related articles (same category, excluding current)
-          this.relatedArticles = data.articles
-            .filter(article => 
-              article.slug &&
-              article.category === foundArticle!.category && 
-              article.slug !== this.slug
-            )
-            .slice(0, 3);
-          
-          // If not enough related articles, fill with any articles
-          if (this.relatedArticles.length < 3) {
-            const additional = data.articles
-              .filter(article => article.slug && article.slug !== this.slug)
-              .slice(0, 3 - this.relatedArticles.length);
-            this.relatedArticles = [...this.relatedArticles, ...additional];
+          // Defer related articles loading to improve initial render
+          if (isPlatformBrowser(this.platformId)) {
+            requestIdleCallback(() => {
+              this.loadRelatedArticles(data, foundArticle!);
+              this.cdr.markForCheck();
+            }, { timeout: 2000 });
+          } else {
+            this.loadRelatedArticles(data, foundArticle!);
           }
           
           // Now load the detailed content from the slug-based file
           this.loadBlogPostContent();
+          this.cdr.markForCheck();
         } else {
           // Article not found, redirect to blog
           this.router.navigate(['/blog']);
@@ -176,13 +180,20 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
             this.article.publishedDate = postData.publishedDate;
           }
           
-          // Update page title and meta tags for SEO
-          this.updateSEOTags();
+          // Defer SEO updates to avoid blocking render
+          if (isPlatformBrowser(this.platformId)) {
+            requestIdleCallback(() => {
+              this.updateSEOTags();
+            }, { timeout: 2000 });
+          } else {
+            this.updateSEOTags();
+          }
           
-          // Force change detection
-          this.cdr.detectChanges();
+          // Mark for check instead of forcing detection
+          this.cdr.markForCheck();
         }
         this.loading = false;
+        this.cdr.markForCheck();
       },
       error: (error) => {
         console.error('Error loading blog post content:', error);
@@ -190,12 +201,36 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
         // If content file doesn't exist, still show the article but without content
         if (this.article) {
           this.article.content = [];
-          this.updateSEOTags();
-          this.cdr.detectChanges();
+          if (isPlatformBrowser(this.platformId)) {
+            requestIdleCallback(() => {
+              this.updateSEOTags();
+            }, { timeout: 2000 });
+          } else {
+            this.updateSEOTags();
+          }
+          this.cdr.markForCheck();
         }
         this.loading = false;
+        this.cdr.markForCheck();
       }
     });
+  }
+
+  private loadRelatedArticles(data: BlogData, foundArticle: BlogArticle): void {
+    this.relatedArticles = data.articles
+      .filter(article => 
+        article.slug &&
+        article.category === foundArticle.category && 
+        article.slug !== this.slug
+      )
+      .slice(0, 3);
+    
+    if (this.relatedArticles.length < 3) {
+      const additional = data.articles
+        .filter(article => article.slug && article.slug !== this.slug)
+        .slice(0, 3 - this.relatedArticles.length);
+      this.relatedArticles = [...this.relatedArticles, ...additional];
+    }
   }
 
   updateSEOTags(): void {
@@ -247,8 +282,16 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
     // Canonical URL
     this.updateCanonicalUrl(articleUrl);
 
-    // JSON-LD Structured Data for Article
-    this.updateStructuredData();
+    // JSON-LD Structured Data for Article - defer to avoid blocking render
+    if (typeof requestIdleCallback !== 'undefined') {
+      requestIdleCallback(() => {
+        this.updateStructuredData();
+      }, { timeout: 2000 });
+    } else {
+      setTimeout(() => {
+        this.updateStructuredData();
+      }, 100);
+    }
   }
 
   private updateCanonicalUrl(url: string): void {
