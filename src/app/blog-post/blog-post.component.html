@@ -23,7 +23,7 @@
       </p>
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-gray-100 dark:border-gray-800">
         <div class="flex items-center gap-4" *ngIf="article.author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-          <img [alt]="'Portrait of ' + article.author.name" class="w-12 h-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-gray-800" [src]="article.author.avatar" itemprop="image"/>
+          <img [alt]="'Portrait of ' + article.author.name" class="w-12 h-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-gray-800" [src]="article.author.avatar" itemprop="image" loading="lazy" decoding="async"/>
           <div class="flex flex-col">
             <span class="text-gray-900 dark:text-white font-semibold text-sm" itemprop="name">{{ article.author.name }}</span>
             <div class="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wide font-medium">
@@ -43,7 +43,7 @@
 
     <!-- Featured Image -->
     <div class="relative w-full aspect-[21/9] rounded-2xl overflow-hidden shadow-lg my-2 group" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-      <img [alt]="article.imageAlt" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" [src]="article.image" itemprop="url"/>
+      <img [alt]="article.imageAlt" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" [src]="article.image" itemprop="url" loading="eager" fetchpriority="high" decoding="async"/>
       <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
     </div>
 
@@ -66,6 +66,8 @@
                 [src]="block.data" 
                 [alt]="block.title || 'Article image'" 
                 class="w-full rounded-xl shadow-lg"
+                loading="lazy"
+                decoding="async"
               />
               <p *ngIf="block.title" class="text-center text-sm text-gray-500 dark:text-gray-400 mt-4 italic">
                 {{ block.title }}
@@ -134,17 +136,24 @@
           View all <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-container">
-        <a *ngFor="let relatedArticle of relatedArticles" [routerLink]="['/blog', relatedArticle.slug]" [href]="'/blog/' + relatedArticle.slug" class="group flex flex-col gap-5 hover-lift">
-          <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-gray-100 dark:bg-gray-800 relative shadow-sm">
-            <img [alt]="relatedArticle.imageAlt" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" [src]="relatedArticle.image"/>
-            <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider text-primary shadow-sm">{{ relatedArticle.category }}</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <article *ngFor="let relatedArticle of relatedArticles" class="flex flex-col group h-full bg-white dark:bg-[#111111] rounded-xl overflow-hidden border border-gray-200 dark:border-gray-800 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 hover-lift">
+          <div class="w-full aspect-[16/9] relative overflow-hidden">
+            <img [alt]="relatedArticle.imageAlt" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" [src]="relatedArticle.image" loading="lazy" decoding="async"/>
+            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
           </div>
-          <div>
-            <h4 class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors leading-tight mb-3">{{ relatedArticle.title }}</h4>
-            <p class="text-sm text-gray-500 leading-relaxed">{{ relatedArticle.description }}</p>
+          <div class="p-6 flex flex-col flex-1 gap-3 relative">
+            <div class="flex justify-between items-center mb-1">
+              <span class="text-primary dark:text-white text-xs font-bold uppercase tracking-wider">{{ relatedArticle.category }}</span>
+              <span class="text-gray-500 dark:text-gray-400 text-xs font-medium">{{ relatedArticle.readTime }}</span>
+            </div>
+            <h4 class="text-primary dark:text-white text-xl font-bold leading-snug group-hover:text-black dark:group-hover:text-gray-300 transition-colors">{{ relatedArticle.title }}</h4>
+            <p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed line-clamp-2">{{ relatedArticle.description }}</p>
+            <a [routerLink]="['/blog', relatedArticle.slug]" [href]="'/blog/' + relatedArticle.slug" class="mt-auto pt-6 flex items-center text-primary dark:text-white font-bold text-sm no-underline">
+              Read more <span class="material-symbols-outlined text-[16px] ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
           </div>
-        </a>
+        </article>
       </div>
     </section>
   </main>

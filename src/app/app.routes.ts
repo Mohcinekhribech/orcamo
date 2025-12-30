@@ -1,19 +1,16 @@
 import { Routes } from '@angular/router';
-import { LandingComponent } from './landing/landing.component';
-import { BlogComponent } from './blog/blog.component';
-import { BlogPostComponent } from './blog-post/blog-post.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: LandingComponent
+    loadComponent: () => import('./landing/landing.component').then(m => m.LandingComponent)
   },
   {
     path: 'blog',
-    component: BlogComponent
+    loadComponent: () => import('./blog/blog.component').then(m => m.BlogComponent)
   },
   {
     path: 'blog/:slug',
-    component: BlogPostComponent
+    loadComponent: () => import('./blog-post/blog-post.component').then(m => m.BlogPostComponent)
   }
 ]; 
