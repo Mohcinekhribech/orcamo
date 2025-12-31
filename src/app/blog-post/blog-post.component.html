@@ -23,7 +23,11 @@
       </p>
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 pt-6 border-t border-gray-100 dark:border-gray-800">
         <div class="flex items-center gap-4" *ngIf="article.author" itemprop="author" itemscope itemtype="https://schema.org/Person">
-          <img [alt]="'Portrait of ' + article.author.name" class="w-12 h-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-gray-800" [src]="article.author.avatar" itemprop="image" loading="lazy" decoding="async"/>
+          <!-- Show icon for Editorial Team, image for others -->
+          <div *ngIf="article.author.name === 'Orcamo Editorial Team'" class="w-12 h-12 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center ring-2 ring-gray-100 dark:ring-gray-800">
+            <span class="material-symbols-outlined text-gray-600 dark:text-gray-400 text-[28px]">groups</span>
+          </div>
+          <img *ngIf="article.author.name !== 'Orcamo Editorial Team'" [alt]="'Portrait of ' + article.author.name" class="w-12 h-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-gray-800" [src]="article.author.avatar" itemprop="image" loading="lazy" decoding="async"/>
           <div class="flex flex-col">
             <span class="text-gray-900 dark:text-white font-semibold text-sm" itemprop="name">{{ article.author.name }}</span>
             <div class="flex items-center gap-2 text-xs text-gray-500 uppercase tracking-wide font-medium">

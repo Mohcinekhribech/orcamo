@@ -25,43 +25,7 @@
   </div>
 
   <!-- Content Section -->
-  <div class="layout-container flex grow flex-col w-full max-w-[1280px] mx-auto px-4 md:px-10 -mt-16 relative z-20">
-    <!-- Featured Article -->
-    <div *ngIf="featuredArticle" class="mb-16">
-      <div class="flex flex-col lg:flex-row items-stretch justify-between gap-0 lg:gap-8 rounded-2xl bg-white dark:bg-[#111111] shadow-lg border border-gray-100 dark:border-gray-800 overflow-hidden group hover:shadow-xl transition-all duration-300 hover-lift">
-        <div class="w-full lg:w-1/2 min-h-[340px] relative overflow-hidden">
-          <img [alt]="featuredArticle.imageAlt" [src]="featuredArticle.image" class="w-full h-full object-cover" loading="eager" fetchpriority="high" decoding="async"/>
-          <div class="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors duration-500"></div>
-        </div>
-        <div class="flex flex-1 flex-col justify-center gap-6 p-8 lg:p-10">
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-3">
-              <span class="bg-gray-100 dark:bg-gray-800 text-primary dark:text-white px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider border border-gray-200 dark:border-gray-700">{{ featuredArticle.category }}</span>
-              <span class="text-gray-500 dark:text-gray-400 text-sm font-medium">• {{ featuredArticle.readTime }}</span>
-            </div>
-            <h2 class="text-primary dark:text-white text-3xl font-bold leading-tight group-hover:text-black dark:group-hover:text-gray-300 transition-colors">{{ featuredArticle.title }}</h2>
-            <p class="text-gray-600 dark:text-gray-300 text-base font-normal leading-relaxed">
-              {{ featuredArticle.description }}
-            </p>
-          </div>
-          <div class="flex items-center gap-4 pt-2 border-t border-gray-100 dark:border-gray-800 mt-2" *ngIf="featuredArticle.author">
-            <div class="flex items-center gap-3 mt-4">
-              <img [alt]="'Portrait of ' + featuredArticle.author.name" class="size-10 rounded-full object-cover ring-2 ring-white dark:ring-gray-800" [src]="featuredArticle.author.avatar" loading="lazy" decoding="async"/>
-              <div class="text-sm">
-                <p class="font-bold text-primary dark:text-white">{{ featuredArticle.author.name }}</p>
-                <p class="text-gray-500 dark:text-gray-400 text-xs">{{ featuredArticle.author.role }}</p>
-              </div>
-            </div>
-            <div class="ml-auto mt-4" *ngIf="featuredArticle.slug">
-            <a [routerLink]="['/blog', featuredArticle.slug]" [href]="'/blog/' + featuredArticle.slug" class="flex items-center gap-2 text-primary dark:text-white font-bold text-sm hover:gap-3 transition-all no-underline" (click)="trackArticleClick(featuredArticle.title, featuredArticle.slug)">
-              Read Article <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
+  <div class="layout-container flex grow flex-col w-full max-w-[1280px] mx-auto px-4 md:px-10 pt-8 relative z-20">
     <!-- Search Bar -->
     <div class="flex flex-col bg-white dark:bg-[#1a202c] rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 p-4 mb-10 mx-auto w-full max-w-2xl">
       <div class="flex items-center gap-3">
