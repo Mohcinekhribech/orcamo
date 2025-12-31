@@ -5,6 +5,7 @@ import { SiteHeaderComponent } from '../shared/components/site-header.component'
 import { SiteFooterComponent } from '../shared/components/site-footer.component';
 import { WhatsappFabComponent } from '../shared/components/whatsapp-fab.component';
 import { SectionComponent } from '../shared/ui/section.component';
+import { AnalyticsService } from '../shared/services/analytics.service';
 
 @Component({
   selector: 'app-landing',
@@ -23,7 +24,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
   contactForm: FormGroup;
   isSubmitted = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(
+    private fb: FormBuilder,
+    private analytics: AnalyticsService
+  ) {
     this.contactForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required, Validators.minLength(2)]],
@@ -165,6 +169,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   onSubmit(): void {
     if (this.contactForm.valid) {
+      // Track form submission
+      if (this.analytics) {
+        this.analytics.trackFormSubmit('contact_form');
+      }
+      
       const formData = this.contactForm.value;
       
       // Create FormData for Formspree

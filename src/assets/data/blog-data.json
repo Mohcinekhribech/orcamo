@@ -24,6 +24,36 @@
   },
   "articles": [
     {
+      "id": "article-3",
+      "slug": "digital-transformation-dead-long-live-digital-execution",
+      "title": "Digital Transformation Is Dead. Long Live Digital Execution.",
+      "description": "For the better part of a decade, \"Digital Transformation\" has been the centerpiece of the corporate boardroom. It has launched a thousand slide decks, consumed billions in consultancy fees, and served as the catch-all justification for every IT spend from cloud migration to Slack integration. But as we move into 2026, it is time to admit a hard truth: The era of \"Digital Transformation\" as a strategic initiative is over.",
+      "category": "Strategy",
+      "readTime": "11 min read",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=630&fit=crop",
+      "imageAlt": "Modern business execution and digital strategy visualization",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+      }
+    },
+    {
+      "id": "article-2",
+      "slug": "silent-killer-growth-data-stack-costing-millions",
+      "title": "The Silent Killer of Growth: Why Your Data Stack Is Costing You Millions",
+      "description": "Most CEOs believe their organizations are \"data-driven.\" They have invested in cloud storage, hired analysts, and mandated dashboard reporting for every department. Yet, behind the polished charts presented in boardrooms, a quiet crisis is unfolding. Growth is stalling, customer acquisition costs are creeping upward, and strategic pivots are taking months instead of days.",
+      "category": "Strategy",
+      "readTime": "10 min read",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=630&fit=crop",
+      "imageAlt": "Data visualization dashboard showing fragmented data silos and analytics",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+      }
+    },
+    {
       "id": "article-1",
       "slug": "from-automation-to-autonomy-ai-agents-2026",
       "title": "From Automation to Autonomy: How AI Agents Will Run Businesses in 2026",

@@ -17,7 +17,7 @@
     
     <!-- CTA -->
     <div class="hidden md:block">
-      <a href="/#contact" class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary hover:bg-black text-white text-sm font-bold transition-all shadow-sm hover:shadow-md" (click)="scrollToSection('contact'); $event.preventDefault()">
+      <a href="/#contact" class="flex items-center justify-center rounded-lg h-10 px-6 bg-primary hover:bg-black text-white text-sm font-bold transition-all shadow-sm hover:shadow-md" (click)="trackCTAClick(); $event.preventDefault()">
         Start Your Digital Transformation
       </a>
     </div>
@@ -79,7 +79,7 @@
         <li class="pt-4 border-t border-gray-200 dark:border-gray-800">
           <button 
             class="w-full flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-black text-white text-base font-bold transition-all"
-            (click)="scrollToSection('contact'); toggleMobileMenu()"
+            (click)="trackCTAClick(); toggleMobileMenu()"
           >
             Start Your Digital Transformation
           </button>

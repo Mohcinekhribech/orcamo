@@ -6,6 +6,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Title, Meta } from '@angular/platform-browser';
 import { SiteHeaderComponent } from '../shared/components/site-header.component';
 import { SiteFooterComponent } from '../shared/components/site-footer.component';
+import { AnalyticsService } from '../shared/services/analytics.service';
 
 interface BlogAuthor {
   name: string;
@@ -70,6 +71,7 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
     private cdr: ChangeDetectorRef,
     private titleService: Title,
     private metaService: Meta,
+    private analytics: AnalyticsService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {}
 
@@ -141,6 +143,9 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
           if (!this.article.content) {
             this.article.content = [];
           }
+          
+          // Track article view
+          this.analytics.trackArticleView(foundArticle.title, foundArticle.slug);
           
           // Defer related articles loading to improve initial render
           if (isPlatformBrowser(this.platformId)) {
@@ -430,10 +435,21 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
     return `${baseUrl}/blog/${this.article.slug}`;
   }
 
+  trackRelatedArticleClick(articleTitle: string, articleSlug: string): void {
+    this.analytics.trackEvent('related_article_click', {
+      event_category: 'content',
+      event_label: articleTitle,
+      article_slug: articleSlug
+    });
+  }
+
   shareArticle(): void {
     if (!this.article || !isPlatformBrowser(this.platformId)) {
       return;
     }
+
+    // Track social share
+    this.analytics.trackSocialShare('native_share', this.article.title);
 
     const shareData = {
       title: this.article.title,
@@ -460,6 +476,9 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
       return;
     }
 
+    // Track social share
+    this.analytics.trackSocialShare('linkedin', this.article.title);
+
     const url = encodeURIComponent(this.articleUrl);
     const title = encodeURIComponent(this.article.title);
     const summary = encodeURIComponent(this.article.description);
@@ -473,6 +492,9 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
       return;
     }
 
+    // Track social share
+    this.analytics.trackSocialShare('twitter', this.article.title);
+
     const url = encodeURIComponent(this.articleUrl);
     const text = encodeURIComponent(`${this.article.title} - ${this.article.description}`);
     
@@ -484,6 +506,12 @@ export class BlogPostComponent implements OnInit, AfterViewInit {
     if (!this.article || !isPlatformBrowser(this.platformId)) {
       return;
     }
+
+    // Track link copy
+    this.analytics.trackEvent('link_copy', {
+      event_category: 'engagement',
+      event_label: this.article.title
+    });
 
     navigator.clipboard.writeText(this.articleUrl).then(() => {
       // Show feedback to user

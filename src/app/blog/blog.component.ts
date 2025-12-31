@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { SiteHeaderComponent } from '../shared/components/site-header.component';
 import { SiteFooterComponent } from '../shared/components/site-footer.component';
+import { AnalyticsService } from '../shared/services/analytics.service';
 
 interface BlogAuthor {
   name: string;
@@ -74,7 +75,10 @@ export class BlogComponent implements OnInit {
   hero: BlogHero | null = null;
   newsletter: BlogNewsletter | null = null;
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private analytics: AnalyticsService
+  ) {}
 
   ngOnInit(): void {
     // Add scroll event listener for header styling
@@ -131,6 +135,14 @@ export class BlogComponent implements OnInit {
 
   clearSearch(): void {
     this.searchQuery = '';
+  }
+
+  trackArticleClick(articleTitle: string, articleSlug?: string): void {
+    this.analytics.trackEvent('article_click', {
+      event_category: 'content',
+      event_label: articleTitle,
+      article_slug: articleSlug || ''
+    });
   }
 
   scrollToSection(sectionId: string): void {

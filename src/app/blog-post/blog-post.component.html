@@ -128,8 +128,11 @@
       </div>
     </div>
 
-    <!-- Related Articles -->
-    <section class="w-full mt-12 sm:mt-24 pt-8 sm:pt-16 border-t border-gray-200 dark:border-gray-800 blog-section" *ngIf="relatedArticles.length > 0">
+  </main>
+
+  <!-- Related Articles -->
+  <section class="w-full mt-12 sm:mt-24 pt-8 sm:pt-16 pb-16 sm:pb-20 border-t border-gray-200 dark:border-gray-800 blog-section !opacity-100 !transform-none" *ngIf="relatedArticles && relatedArticles.length > 0">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0 mb-6 sm:mb-10">
         <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white tracking-tight">Read Next</h3>
         <a routerLink="/blog" href="/blog" class="text-primary dark:text-white font-medium hover:underline flex items-center gap-1">
@@ -149,14 +152,14 @@
             </div>
             <h4 class="text-primary dark:text-white text-xl font-bold leading-snug group-hover:text-black dark:group-hover:text-gray-300 transition-colors">{{ relatedArticle.title }}</h4>
             <p class="text-gray-600 dark:text-gray-400 text-sm font-normal leading-relaxed line-clamp-2">{{ relatedArticle.description }}</p>
-            <a [routerLink]="['/blog', relatedArticle.slug]" [href]="'/blog/' + relatedArticle.slug" class="mt-auto pt-6 flex items-center text-primary dark:text-white font-bold text-sm no-underline">
+            <a [routerLink]="['/blog', relatedArticle.slug]" [href]="'/blog/' + relatedArticle.slug" class="mt-auto pt-6 flex items-center text-primary dark:text-white font-bold text-sm no-underline" (click)="trackRelatedArticleClick(relatedArticle.title, relatedArticle.slug)">
               Read more <span class="material-symbols-outlined text-[16px] ml-1 group-hover:translate-x-1 transition-transform">arrow_forward</span>
             </a>
           </div>
         </article>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 </div>
 
 <!-- Loading State -->

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
+import { AnalyticsService } from '../services/analytics.service';
 
 @Component({
   selector: 'app-site-header',
@@ -11,9 +12,15 @@ import { Router, RouterModule } from '@angular/router';
 export class SiteHeaderComponent {
   isMobileMenuOpen = false;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private analytics: AnalyticsService
+  ) {}
 
   scrollToSection(sectionId: string): void {
+    // Track navigation click
+    this.analytics.trackButtonClick(`nav_${sectionId}`, 'header');
+    
     // Check if we're on the landing page
     if (this.router.url === '/' || this.router.url === '') {
       // We're on the landing page, just scroll to the section
@@ -37,6 +44,11 @@ export class SiteHeaderComponent {
     if (this.isMobileMenuOpen) {
       this.isMobileMenuOpen = false;
     }
+  }
+
+  trackCTAClick(): void {
+    this.analytics.trackButtonClick('cta_header', 'header');
+    this.scrollToSection('contact');
   }
 
   toggleMobileMenu(): void {
