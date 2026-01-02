@@ -24,6 +24,21 @@
   },
   "articles": [
     {
+      "id": "article-4",
+      "slug": "cloud-migration-isnt-strategy-what-actually-is",
+      "title": "Cloud Migration Isn't a Strategy. Here's What Actually Is.",
+      "description": "In boardrooms across the globe, \"moving to the cloud\" is often spoken of as if it were a finish line. Here is the cold, hard reality: Cloud migration is a tactical move. It is not a strategy. At Orcamo, we have seen dozens of enterprises treat the cloud as a destination rather than a tool. The result? They don't transform; they just relocate their problems.",
+      "category": "Cloud Computing",
+      "readTime": "9 min read",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=630&fit=crop",
+      "imageAlt": "Cloud computing infrastructure and digital transformation strategy",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": ""
+      }
+    },
+    {
       "id": "article-3",
       "slug": "digital-transformation-dead-long-live-digital-execution",
       "title": "Digital Transformation Is Dead. Long Live Digital Execution.",
@@ -35,7 +50,7 @@
       "author": {
         "name": "Orcamo Editorial Team",
         "role": "Strategic Insights",
-        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+        "avatar": ""
       }
     },
     {
@@ -50,7 +65,7 @@
       "author": {
         "name": "Orcamo Editorial Team",
         "role": "Strategic Insights",
-        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+        "avatar": ""
       }
     },
     {
@@ -65,7 +80,7 @@
       "author": {
         "name": "Orcamo Editorial Team",
         "role": "Strategic Insights",
-        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+        "avatar": ""
       }
     }
   ],
