@@ -24,6 +24,81 @@
   },
   "articles": [
     {
+      "id": "article-9",
+      "slug": "stop-buying-tools-start-designing-systems",
+      "title": "Stop Buying Tools. Start Designing Systems.",
+      "description": "Walk into almost any enterprise, and you'll find a landscape littered with technology. CRMs, ERPs, marketing automation, collaboration suites—the average company now juggles dozens, if not hundreds, of SaaS subscriptions. Leaders believe they are investing in \"digital transformation.\" In reality, they are often just accumulating tool sprawl. At Orcamo, we see a recurring pattern: organizations don't have a technology problem; they have a systems design problem.",
+      "category": "Strategy",
+      "readTime": "8 min read",
+      "image": "assets/images/Stop Buying Tools Start Designing Systems.png",
+      "imageAlt": "System design vs tool sprawl: integrated architecture for business outcomes",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": ""
+      }
+    },
+    {
+      "id": "article-8",
+      "slug": "scaling-faster-than-systems-fastest-way-to-fail",
+      "title": "Scaling Faster Than Your Systems Is the Fastest Way to Fail",
+      "description": "In the ecosystem of high-growth startups and scaling enterprises, growth is the ultimate metric. But there is a dangerous fallacy in modern leadership: the belief that growth solves all problems. In reality, rapid growth doesn't solve problems; it exposes them. Many companies fail not because the market moved away from them, but because they lacked the systems integrity to handle their own success. Scaling revenue is a sales challenge; scaling a business is a systems challenge.",
+      "category": "Strategy",
+      "readTime": "9 min read",
+      "image": "assets/images/scaling-faster-than-systems-fastest-way-to-fail.png",
+      "imageAlt": "Business scaling and systems architecture: the relationship between growth and infrastructure",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": ""
+      }
+    },
+    {
+      "id": "article-7",
+      "slug": "ai-wont-replace-team-bad-architecture-will",
+      "title": "AI Won't Replace Your Team — But Bad Architecture Will",
+      "description": "The headlines have spent the last eighteen months predicting the end of the engineering team. We've been told that AI will write the code, debug the systems, and eventually render the human developer obsolete. It's a compelling narrative for a board meeting, but it's fundamentally wrong. AI isn't going to replace your team. However, bad architecture will. It will replace their impact, their speed, and their ability to innovate until your organization becomes a high-cost, low-output shell of itself.",
+      "category": "Artificial Intelligence",
+      "readTime": "8 min read",
+      "image": "assets/images/AI Wont Replace Your Team.png",
+      "imageAlt": "AI and software architecture: the relationship between artificial intelligence and system design",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": ""
+      }
+    },
+    {
+      "id": "article-6",
+      "slug": "why-most-digital-transformation-projects-fail-before-code",
+      "title": "Why Most Digital Transformation Projects Fail Before Writing a Single Line of Code",
+      "description": "In the rush to \"go digital,\" many CEOs believe that the greatest risk lies in the development phase—bugs, missed deadlines, or technical debt. But at Orcamo, our experience with enterprise-level initiatives has revealed a different truth: Most digital transformation projects fail before the first line of code is ever written. When you skip the foundational work of discovery and governance, you aren't saving time; you are merely accelerating the rate at which you hit a wall.",
+      "category": "Strategy",
+      "readTime": "7 min read",
+      "image": "assets/images/Why Most Digital Transformation Projects Fail Before Writing a Single Line of Code.png",
+      "imageAlt": "Digital transformation project planning and strategic discovery process",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": ""
+      }
+    },
+    {
+      "id": "article-5",
+      "slug": "dashboards-look-great-decisions-still-slow",
+      "title": "Your Dashboards Look Great. Your Decisions Are Still Slow.",
+      "description": "Every Monday morning, executive teams across the globe stare at beautifully designed dashboards. Yet, despite this unprecedented visibility, the most common complaint among CEOs remains: \"We are moving too slowly.\" At Orcamo, we see this paradox daily. Organizations have spent millions building \"data-driven\" cultures, yet their decision velocity hasn't improved.",
+      "category": "Strategy",
+      "readTime": "8 min read",
+      "image": "assets/images/Your Dashboards Look Great. Your Decisions Are Still Slow.png",
+      "imageAlt": "Business analytics dashboard with KPIs and decision-making metrics",
+      "author": {
+        "name": "Orcamo Editorial Team",
+        "role": "Strategic Insights",
+        "avatar": ""
+      }
+    },
+    {
       "id": "article-4",
       "slug": "cloud-migration-isnt-strategy-what-actually-is",
       "title": "Cloud Migration Isn't a Strategy. Here's What Actually Is.",

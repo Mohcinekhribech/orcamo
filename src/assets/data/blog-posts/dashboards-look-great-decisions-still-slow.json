@@ -1,0 +1,62 @@
+{
+  "slug": "dashboards-look-great-decisions-still-slow",
+  "publishedDate": "2026-01-04",
+  "content": [
+    {
+      "contentType": "text",
+      "title": null,
+      "data": "<p>Every Monday morning, executive teams across the globe sit in conference rooms—physical or virtual—and stare at beautifully designed, multi-colored dashboards. The charts are crisp, the data is \"real-time,\" and the interface is intuitive.</p><p>Yet, despite this unprecedented visibility, the most common complaint among CEOs remains the same: <strong>\"We are moving too slowly.\"</strong></p><p>At Orcamo, we see this paradox daily. Organizations have spent millions building \"data-driven\" cultures, yet their decision velocity hasn't improved. They have successfully transformed raw data into visibility, but they have failed to transform visibility into execution.</p><p>The hard truth? Your dashboards aren't broken because the data is wrong; they are broken because they weren't designed to make decisions. They were designed to report history.</p>"
+    },
+    {
+      "contentType": "text",
+      "title": "The Visibility Gap: Why Insights Don't Translate to Speed",
+      "data": "<p>Visibility is not the same as clarity. Most dashboards act like a car's rearview mirror—essential for seeing where you've been, but useless for navigating a hairpin turn at 100 mph.</p><p>When a dashboard highlights a \"red\" KPI, what happens next? In most companies, a meeting is scheduled. Then a sub-committee is formed to investigate the data. Two weeks later, a report is produced. By the time a decision is made, the market has moved.</p><p>This gap between insight and action is where ROI goes to die. If your data doesn't tell you what to do and who should do it, it isn't an asset—it's noise.</p>"
+    },
+    {
+      "contentType": "text",
+      "title": "Why Your Data Is Failing the Speed Test",
+      "data": "<p>If your leadership team is still struggling with slow execution despite having \"great data,\" you are likely falling into these four enterprise traps:</p>"
+    },
+    {
+      "contentType": "text",
+      "title": "1. KPI Gluttony",
+      "data": "<p>When you track 50 metrics, you track none. Executives often demand \"total visibility,\" leading to dashboards crowded with vanity metrics that obscure the three \"North Star\" numbers that actually drive the P&L.</p>"
+    },
+    {
+      "contentType": "text",
+      "title": "2. The Lagging Indicator Trap",
+      "data": "<p>Most dashboards report on what happened last month or last week. In 2026, relying on lagging indicators is like trying to win a race by looking at the tracks you left behind. If your data isn't providing leading signals (e.g., a drop in lead quality today vs. a drop in revenue next month), you are always playing defense.</p>"
+    },
+    {
+      "contentType": "text",
+      "title": "3. Reporting Without Ownership",
+      "data": "<p>A dashboard that shows a problem without a clearly defined \"Owner\" is just a grievance list. If the \"Churn Rate\" is high, is that a Product problem, a Support problem, or a Sales problem? Without clear accountability mapped to every metric, data leads to finger-pointing, not fixes.</p>"
+    },
+    {
+      "contentType": "text",
+      "title": "4. Insights Without \"Next Best Actions\"",
+      "data": "<p>A high-performing dashboard shouldn't just say, \"Sales are down 10%.\" It should say, \"Sales are down 10%; reallocate 20% of the marketing budget to Region B to compensate.\"</p>"
+    },
+    {
+      "contentType": "text",
+      "title": "From Reporting to Decision-Ready Data",
+      "data": "<p>High-performing organizations have shifted their focus from \"Business Intelligence\" to \"Decision Intelligence.\" They don't build dashboards for departments; they build them for decisions.</p><p>Here is what \"Decision-Ready\" execution looks like in practice:</p><p><strong>Decision Mapping:</strong> Before building a single chart, define the decisions that matter. \"If this number drops below X, we will automatically do Y.\"</p><p><strong>Workflow Integration:</strong> Stop asking leaders to \"go check the dashboard.\" Push the data into the tools they already use (Slack, CRM, ERP) at the exact moment a decision is required.</p><p><strong>Escalation Paths:</strong> Define \"Automatic Triggers.\" If a critical metric hits a certain threshold, the system should automatically alert the owner and schedule a 15-minute \"Action Meeting\"—bypassing the usual bureaucratic delay.</p>"
+    },
+    {
+      "contentType": "image",
+      "title": "Descriptive vs Prescriptive Analytics: The evolution from reporting to decision intelligence",
+      "data": "assets/images/descriptive analytics vs prescriptive analytics.png"
+    },
+    {
+      "contentType": "text",
+      "title": "The 60-Second Dashboard Audit",
+      "data": "<p>As a leader, you can audit your organization's decision velocity by asking your team these three questions:</p><p><strong>The Action Test:</strong> \"If this specific chart turned bright red tomorrow morning, what is the exact first step we would take?\" (If the answer is \"investigate,\" you have a reporting problem).</p><p><strong>The Ownership Test:</strong> \"Who is the single individual responsible for moving this needle, and do they have the authority to act without a committee?\"</p><p><strong>The Signal Test:</strong> \"Is this a lagging indicator of a past failure, or a leading signal of a future opportunity?\"</p>"
+    },
+    {
+      "contentType": "text",
+      "title": "The Executive Takeaway",
+      "data": "<p>In the coming years, the winners won't be the companies with the most data; they will be the companies with the highest decision velocity. Dashboards are a means to an end. That end is <strong>Execution</strong>.</p><p>If your current data stack isn't shortening the time between \"seeing\" and \"doing,\" it is a cost center, not a competitive advantage. At Orcamo, we specialize in closing that gap—moving your organization from beautiful reports to flawless execution.</p><p><strong>Is your data helping you win, or just helping you watch?</strong> Let's talk about transforming your insights into an execution engine.</p>"
+    }
+  ]
+}
+
